@@ -1,0 +1,35 @@
+.header-container {
+    background-color: #20201F;
+    margin: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    margin: 0 15px;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-logo {
+    width: 30px;
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.header-links a:hover {
+    text-decoration: white underline;
+}

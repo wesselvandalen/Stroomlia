@@ -1,7 +1,7 @@
 package main.app.presentation;
 
 import main.app.application.ProductService;
-import main.app.domain.Product;
+import main.app.domain.Produkt;
 import main.app.presentation.dto.product.ProductRequestDTO;
 import main.app.presentation.dto.product.ProductResponseDTO;
 import org.springframework.http.HttpStatusCode;
@@ -36,7 +36,7 @@ public class ProductController {
 
     @GetMapping
     public ResponseEntity<List<ProductResponseDTO>> getAllProducts() {
-        List<Product> products = this.productService.getAllProducts();
+        List<Produkt> products = this.productService.getAllProducts();
         return new ResponseEntity<>(convertProductListToProductResponseDTOList(products), HttpStatusCode.valueOf(200));
     }
 
@@ -45,9 +45,9 @@ public class ProductController {
         this.productService.deleteProductById(id);
     }
 
-    private List<ProductResponseDTO> convertProductListToProductResponseDTOList(List<Product> products) {
+    private List<ProductResponseDTO> convertProductListToProductResponseDTOList(List<Produkt> products) {
         List<ProductResponseDTO> dtoList = new ArrayList<>();
-        for (Product product : products) {
+        for (Produkt product : products) {
             dtoList.add(new ProductResponseDTO(product));
         }
         return dtoList;

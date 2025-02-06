@@ -1,9 +1,8 @@
 package main.app.presentation.dto.product;
 
 import main.app.domain.ProductCategory;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
+import java.util.List;
 
 public class ProductRequestDTO {
 
@@ -11,23 +10,23 @@ public class ProductRequestDTO {
     private String description;
     private double price;
     private ProductCategory productCategory;
-    private String imagePath;
+    private List<String> imagePaths;
 
     protected ProductRequestDTO() { }
-    public ProductRequestDTO(String name, String description, double price, ProductCategory productCategory, String imagePath) {
+    public ProductRequestDTO(String name, String description, double price, ProductCategory productCategory, List<String> imagePaths) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.productCategory = productCategory;
-        this.imagePath = imagePath;
+        this.imagePaths = imagePaths;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public List<String> getImagePaths() {
+        return imagePaths;
     }
 
     public double getPrice() {
