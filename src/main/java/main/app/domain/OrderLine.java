@@ -42,15 +42,4 @@ public class OrderLine {
     public String getProductName() {
         return productName;
     }
-
-    @Override
-    public String toString() {
-        return "OrderLine{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", productPrice=" + productPrice +
-                ", amount=" + amount +
-                ", productId=" + productId +
-                '}';
-    }
 }

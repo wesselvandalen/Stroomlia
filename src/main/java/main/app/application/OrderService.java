@@ -4,7 +4,7 @@ import jakarta.transaction.Transactional;
 import main.app.data.OrderRepository;
 import main.app.domain.Order;
 import main.app.domain.OrderLine;
-import main.app.domain.Produkt;
+import main.app.domain.Product;
 import main.app.domain.exception.OrderNotFoundException;
 import main.app.presentation.dto.order.OrderRequestDTO;
 import main.app.presentation.dto.order.ProductAmountCarrier;
@@ -28,7 +28,7 @@ public class OrderService {
 
     public Order createOrder(OrderRequestDTO dto) {
         List<Long> productIds = retrieveProductIds(dto.getProductAmountCarrierList());
-        List<Produkt> products = this.productService.getProductsById(productIds);
+        List<Product> products = this.productService.getProductsById(productIds);
 
         List<Integer> amounts = retrieveAmounts(dto.getProductAmountCarrierList());
         List<OrderLine> orderLines = this.convertProductListToOrderLineList(products, amounts);
@@ -49,12 +49,12 @@ public class OrderService {
         this.orderRepository.deleteById(id);
     }
 
-    private List<OrderLine> convertProductListToOrderLineList(List<Produkt> products, List<Integer> amounts) {
+    private List<OrderLine> convertProductListToOrderLineList(List<Product> products, List<Integer> amounts) {
         List<OrderLine> orderlines = new ArrayList<>();
         for (int i = 0; i < products.size(); i++) {
-            Produkt product = products.get(i);
+            Product product = products.get(i);
             int amount = amounts.get(i);
-            orderlines.add(new OrderLine(product.getNavn(), product.getPris(), amount, product.getId()));
+            orderlines.add(new OrderLine(product.getName(), product.getPrice(), amount, product.getId()));
         }
         return orderlines;
     }

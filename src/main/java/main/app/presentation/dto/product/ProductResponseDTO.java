@@ -1,10 +1,8 @@
 package main.app.presentation.dto.product;
 
-import main.app.domain.Produkt;
-import main.app.domain.ProductCategory;
+import main.app.domain.Product;
 import main.app.domain.Rating;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductResponseDTO {
@@ -14,21 +12,19 @@ public class ProductResponseDTO {
     private String description;
     private double price;
     private List<Rating> ratings;
-    private ProductCategory productCategory;
     private List<String> imagePaths;
     private int averageRating;
     private int numberOfRatings;
 
-    public ProductResponseDTO(Produkt product) {
+    public ProductResponseDTO(Product product) {
         this.id = product.getId();
-        this.name = product.getNavn();
-        this.description = product.getBeskrivelse();
-        this.price = product.getPris();
-        this.ratings = product.getVurderinger();
-        this.productCategory = product.getProductCategory();
-        this.imagePaths = product.getBildeLenker();
-        this.averageRating = product.getGjennomsnittligeVurdering();
-        this.numberOfRatings = product.getAntallVurderinger();
+        this.name = product.getName();
+        this.description = product.getDescription();
+        this.price = product.getPrice();
+        this.ratings = product.getRatings();
+        this.imagePaths = product.getImagePaths();
+        this.averageRating = product.getAverageRating();
+        this.numberOfRatings = product.getNumberOfRatings();
     }
 
     public int getNumberOfRatings() {
@@ -57,10 +53,6 @@ public class ProductResponseDTO {
 
     public Long getId() {
         return id;
-    }
-
-    public ProductCategory getProductCategory() {
-        return productCategory;
     }
 
     public List<String> getImagePaths() {

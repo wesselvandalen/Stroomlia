@@ -11,11 +11,11 @@ public class ProductAmount {
     @GeneratedValue
     private Long id;
     @ManyToOne(cascade = ALL)
-    private Produkt product;
+    private Product product;
     private int amount;
 
     protected ProductAmount() { }
-    public ProductAmount(Produkt product, int amount) {
+    public ProductAmount(Product product, int amount) {
         this.product = product;
         this.amount = amount;
     }
@@ -32,7 +32,7 @@ public class ProductAmount {
         return id;
     }
 
-    public Produkt getProduct() {
+    public Product getProduct() {
         return product;
     }
 

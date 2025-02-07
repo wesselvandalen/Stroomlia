@@ -2,8 +2,6 @@ package main.app.domain;
 
 import jakarta.persistence.*;
 
-import static jakarta.persistence.CascadeType.ALL;
-
 @Entity
 @Table(name = "\"users\"")
 public class User {
