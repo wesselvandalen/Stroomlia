@@ -1,0 +1,9 @@
+.review-stars-content {
+    display: flex;
+}
+
+.review-stars-content svg {
+    width: 15px;
+    height: 15px;
+    color: #ffb400; /* Gold color for stars */
+}

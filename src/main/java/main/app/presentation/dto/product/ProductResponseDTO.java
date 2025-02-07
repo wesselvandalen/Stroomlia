@@ -1,6 +1,7 @@
 package main.app.presentation.dto.product;
 
 import main.app.domain.Product;
+import main.app.domain.ProductCategory;
 import main.app.domain.Rating;
 
 import java.util.List;
@@ -15,6 +16,7 @@ public class ProductResponseDTO {
     private List<String> imagePaths;
     private int averageRating;
     private int numberOfRatings;
+    private ProductCategory productCategory;
 
     public ProductResponseDTO(Product product) {
         this.id = product.getId();
@@ -25,6 +27,7 @@ public class ProductResponseDTO {
         this.imagePaths = product.getImagePaths();
         this.averageRating = product.getAverageRating();
         this.numberOfRatings = product.getNumberOfRatings();
+        this.productCategory = product.getProductCategory();
     }
 
     public int getNumberOfRatings() {
@@ -37,6 +40,10 @@ public class ProductResponseDTO {
 
     public List<Rating> getRatings() {
         return ratings;
+    }
+
+    public ProductCategory getProductCategory() {
+        return productCategory;
     }
 
     public String getDescription() {

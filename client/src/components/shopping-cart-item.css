@@ -1,0 +1,153 @@
+/* Shopping Cart Item Container */
+.shopping-cart-item-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+}
+
+/* Image and Title */
+.shopping-cart-item-title-image-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.shopping-cart-item-title-image-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.shopping-cart-item-info h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    margin: 0 20px 0 0;
+}
+
+.shopping-cart-item-info p {
+    opacity: .6;
+    margin: 5px 0 0 0;
+    font-size: .8rem;
+}
+
+/* Price and Amount Control */
+.price-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.price-p {
+    font-weight: 400;
+    font-weight: 12px;
+    margin: 0 0 -12px 3px;
+}
+
+.shopping-cart-item-amount-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.amount-button {
+    background: none;
+    border: none;
+    font-size: .9rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.amount-button:focus {
+    outline: none;
+}
+
+.delete-item-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #000;
+    cursor: pointer;
+    margin: 15px 0 0 -10px;
+}
+
+.increase {
+    margin-top: 12px;
+}
+
+.decrease {
+    margin-top: 9px;
+}
+
+.delete-item-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.cart-button {
+    position: relative;
+
+}
+
+.cart-button .bag-tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    position: absolute;
+    top: 120%; /* Flytter boksen under ikonet */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cart-button .bag-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+}
+
+.cart-button:hover .bag-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Hover Effects */
+.amount-button:hover,
+.delete-item-button:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .shopping-cart-item-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .price-buttons-container {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .shopping-cart-item-price {
+        margin-top: 10px;
+    }
+}

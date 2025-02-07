@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Mainview from './pages/mainview';
 import Header from './components/header';
 import TopAnnouncement from './components/top-announcement';
+import ShoppingCartView from './pages/shopping-cart-view';
+import ProductsView from './pages/products-view';
+import ProductDetailView from './pages/products-detail-view';
 
 export default function App() {
   return (
@@ -15,6 +18,9 @@ export default function App() {
         <div className="routes-container">
           <Routes>
             <Route path={"/"} element={<Mainview />} />
+            <Route path={"/handlekurv"} element={<ShoppingCartView />} />
+            <Route path={"/produkter"} element={<ProductsView/>}/>
+            <Route path={"/produkter/:productId"} element={<ProductDetailView/>}/>
           </Routes>
         </div>
       </Router>

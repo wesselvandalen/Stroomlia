@@ -1,0 +1,86 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    width: 250px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    min-height: 400px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+    transform: scale(1.1);
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.title-review-container h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.rating-container {
+    font-size: 12px;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating-container svg {
+    width: 14px;
+    height: 14px;
+}
+
+.product-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.product-details p:first-child {
+    font-weight: bold;
+    color: #222;
+}
+
+.product-details p:nth-child(2) {
+    font-size: 16px;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Optional: Add media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+}

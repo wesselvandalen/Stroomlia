@@ -13,10 +13,10 @@ export default function Header() {
                     </a>
                 </div>
                 <div className="header-links">
-                    <a href="/mobiler">Mobiltelefoner</a>
-                    <a href="/laptop">Laptoper</a>
-                    <a href="/tv">TV og skjermer</a>
-                    <a href="/tilbehor">Tilbehør</a>
+                    <a href="/mobiltelefoner">Mobiltelefoner</a>
+                    <a href="/laptoper">Laptoper</a>
+                    <a href="/tvogskjermer">TV og skjermer</a>
+                    <a href="/tilbehør">Tilbehør</a>
                     <a href="/klokker">Klokker</a>
                     <a href="/audio">Audio</a>
                 </div>

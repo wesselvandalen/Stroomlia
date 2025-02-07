@@ -8,6 +8,9 @@ import main.app.presentation.dto.product.ProductRequestDTO;
 import main.app.presentation.dto.user.UserRequestDTO;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import static main.app.domain.ProductCategory.*;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -47,66 +50,104 @@ public class StartupRunner implements CommandLineRunner {
                                 "mooselover", "https://cdn-icons-png.flaticon.com/512/9187/9187604.png"));
 
                 // Produkt
-                Product appleMacPro2023 = productService.createProduct(new ProductRequestDTO(
-                                "Apple Mac Pro (2023)",
-                                "Den ultimate stasjonære arbeidsstasjonen fra Apple, designet for profesjonelle innen film, musikkproduksjon og programmering. Med en kraftig Apple M2 Ultra-chip, opptil 192 GB RAM og en modulær design, gir Mac Pro uovertruffen ytelse og utvidelsesmuligheter. Dette er den perfekte maskinen for krevende arbeidsflyter, med støtte for flere 8K-skjermer og lynraske SSD-er. Kjølesystemet er optimalisert for maksimal ytelse med lav støy. Med en utrolig robust og elegant aluminiumsdesign, er Mac Pro et teknologisk mesterverk.",
-                                99990,
-                                List.of("https://example.com/macpro1.jpg", "https://example.com/macpro2.jpg")));
-
                 Product appleMacbookPro16 = productService.createProduct(new ProductRequestDTO(
                                 "Apple MacBook Pro 16\" (M3 Max, 2023)",
                                 "MacBook Pro 16-tommer er den ultimate bærbare maskinen for profesjonelle. Med Apples nyeste M3 Max-chip, opptil 128 GB RAM og en fantastisk Liquid Retina XDR-skjerm, gir denne maskinen utrolig ytelse og batteritid. Perfekt for utviklere, designere og videoredigerere.",
                                 52990,
-                                List.of("https://example.com/macbookpro16-1.jpg",
-                                                "https://example.com/macbookpro16-2.jpg")));
+                                LAPTOPER,
+                                List.of(
+                                                "https://mac-center.com/cdn/shop/files/MacBook_Pro_16-in_Silver_PDP_Image_Position-1__ESES.jpg?v=1700303935&width=1445",
+                                                "https://cdn.awsli.com.br/2510/2510599/produto/255527541/macbook-pro-14-chip-m3-8gb-512gb-ssd-cinza-espacial-68790285-sw9k3p33hj.png")));
 
-                Product appleMacbookAir15 = productService.createProduct(new ProductRequestDTO(
-                                "Apple MacBook Air 15\" (M2, 2023)",
-                                "MacBook Air 15-tommer gir den perfekte balansen mellom ytelse og bærbarhet. Med Apples M2-chip, en stor og lyssterk Retina-skjerm og et batteri som varer hele dagen, er dette en perfekt laptop for studenter og profesjonelle på farten.",
-                                18990,
-                                List.of("https://example.com/macbookair15.jpg")));
-
-                Product appleStudioDisplay = productService.createProduct(new ProductRequestDTO(
-                                "Apple Studio Display",
-                                "En fantastisk 27-tommers 5K Retina-skjerm med utrolig fargegjengivelse og lysstyrke. Perfekt for kreative profesjonelle som jobber med foto- og videoredigering.",
-                                19990,
-                                List.of("https://example.com/studiodisplay.jpg")));
-
-                Product appleProDisplayXDR = productService.createProduct(new ProductRequestDTO(
-                                "Apple Pro Display XDR",
-                                "Apples flaggskipskjerm for profesjonelle, med en 32-tommers 6K Retina-skjerm og ekstremt høy kontrast og lysstyrke. Ideell for profesjonell videoredigering og grafisk design.",
-                                49990,
-                                List.of("https://example.com/prodisplayxdr.jpg")));
-
-                Product appleIphone15ProMax = productService.createProduct(new ProductRequestDTO(
-                                "Apple iPhone 15 Pro Max",
-                                "Apples mest avanserte smarttelefon, med en titanramme, A17 Pro-chip og en kraftig trippelkameraoppsett. Perfekt for fotografer og innholdsprodusenter.",
-                                18990,
-                                List.of("https://example.com/iphone15promax.jpg")));
-
-                Product appleIphone15 = productService.createProduct(new ProductRequestDTO(
-                                "Apple iPhone 15",
-                                "En kraftig og elegant smarttelefon med A16 Bionic-chip, Dynamic Island og et fantastisk kamerasystem.",
-                                12990,
-                                List.of("https://example.com/iphone15.jpg")));
-
-                Product appleIPadPro13 = productService.createProduct(new ProductRequestDTO(
-                                "Apple iPad Pro 13\" (M2, 2023)",
-                                "Den ultimate nettbrettopplevelsen med en stor 13-tommers Liquid Retina XDR-skjerm, M2-chip og støtte for Apple Pencil Pro.",
+                // MOBILTELEFONER
+                Product appleIphone14Pro = productService.createProduct(new ProductRequestDTO(
+                                "Apple iPhone 14 Pro",
+                                "En kraftig smarttelefon med A15 Bionic-chip, ProMotion-skjerm og et avansert trippelkameraoppsett for fantastisk foto og video.",
                                 15990,
-                                List.of("https://example.com/ipadpro13.jpg")));
+                                MOBILTELEFONER,
+                                List.of("https://example.com/iphone14pro.jpg")));
 
-                Product appleIPadAir11 = productService.createProduct(new ProductRequestDTO(
-                                "Apple iPad Air 11\" (M2, 2023)",
-                                "En kraftig, men lett iPad med M2-chip, 11-tommers Liquid Retina-skjerm og lang batteritid.",
-                                10990,
-                                List.of("https://example.com/ipadair11.jpg")));
+                Product appleIphoneSE = productService.createProduct(new ProductRequestDTO(
+                                "Apple iPhone SE (3. generasjon)",
+                                "En rimelig iPhone med den kraftige A15 Bionic-chipen, et flott kamera og design inspirert av iPhone 8.",
+                                7990,
+                                MOBILTELEFONER,
+                                List.of("https://example.com/iphonese.jpg")));
 
-                Product appleWatchUltra2 = productService.createProduct(new ProductRequestDTO(
-                                "Apple Watch Ultra 2",
-                                "Apples mest robuste smartklokke, med en titanramme, avanserte helsesensorer og ekstrem batteritid.",
-                                12990,
-                                List.of("https://example.com/applewatchultra2.jpg")));
+                // LAPTOPER
+                Product appleMacbookPro13 = productService.createProduct(new ProductRequestDTO(
+                                "Apple MacBook Pro 13\" (M2, 2022)",
+                                "Den ultimate MacBook for både profesjonelle og studenter, med M2-chip for eksepsjonell ytelse og batterilevetid.",
+                                16990,
+                                LAPTOPER,
+                                List.of("https://example.com/macbookpro13.jpg")));
+
+                Product appleMacbookPro14 = productService.createProduct(new ProductRequestDTO(
+                                "Apple MacBook Pro 14\" (M1 Pro, 2021)",
+                                "En kraftig laptop med M1 Pro-chip, fantastisk Retina-skjerm og imponerende ytelse for krevende arbeidsoppgaver som videoredigering og grafisk design.",
+                                24990,
+                                LAPTOPER,
+                                List.of("https://example.com/macbookpro14.jpg")));
+
+                // TVOGSKJERMER
+                Product appleProDisplayXDR32 = productService.createProduct(new ProductRequestDTO(
+                                "Apple Pro Display XDR (32\")",
+                                "Flagship-skjermen med ekstremt høy oppløsning og fargepresisjon, perfekt for profesjonelle som arbeider med grafikk, foto og video.",
+                                74990,
+                                TVOGSKJERMER,
+                                List.of("https://example.com/prodisplayxdr32.jpg")));
+
+                Product appleTV4K = productService.createProduct(new ProductRequestDTO(
+                                "Apple TV 4K (2022)",
+                                "Apple TV 4K gir en enestående streamingopplevelse med 4K HDR, Dolby Atmos og den nye Siri Remote.",
+                                2990,
+                                TVOGSKJERMER,
+                                List.of("https://example.com/appletv4k.jpg")));
+
+                // TILBEHØR
+                Product appleAirPodsPro = productService.createProduct(new ProductRequestDTO(
+                                "Apple AirPods Pro (2. generasjon)",
+                                "Aktiv støydemping og fantastisk lydkvalitet for en bedre lytteopplevelse. Perfekt for både musikk og samtaler.",
+                                3990,
+                                TILBEHØR,
+                                List.of("https://example.com/airpodspro.jpg")));
+
+                Product appleMagicMouse = productService.createProduct(new ProductRequestDTO(
+                                "Apple Magic Mouse (2. generasjon)",
+                                "En elegant og funksjonell mus med berøringsfølsom overflate for rask navigasjon.",
+                                1190,
+                                TILBEHØR,
+                                List.of("https://example.com/magicmouse.jpg")));
+
+                // KLOKKER
+                Product appleWatchSeries8 = productService.createProduct(new ProductRequestDTO(
+                                "Apple Watch Series 8",
+                                "Den nyeste smartklokken fra Apple med helse- og treningsfunksjoner, alltid på-skjerm og batterilevetid som varer hele dagen.",
+                                4990,
+                                KLOKKER,
+                                List.of("https://example.com/applewatchseries8.jpg")));
+
+                Product appleWatchSE = productService.createProduct(new ProductRequestDTO(
+                                "Apple Watch SE (2. generasjon)",
+                                "En rimelig smartklokke med de viktigste helse- og treningsfunksjonene, designet for alle som ønsker å holde seg aktiv.",
+                                3490,
+                                KLOKKER,
+                                List.of("https://example.com/applewatchse.jpg")));
+
+                // AUDIO
+                Product appleAirPodsMax = productService.createProduct(new ProductRequestDTO(
+                                "Apple AirPods Max",
+                                "Over-ear hodetelefoner med aktiv støydemping, eksepsjonell lydkvalitet og lang batterilevetid.",
+                                7990,
+                                AUDIO,
+                                List.of("https://example.com/airpodsmax.jpg")));
+
+                Product beatsFitPro = productService.createProduct(new ProductRequestDTO(
+                                "Beats Fit Pro",
+                                "Trådløse øretelefoner med aktiv støydemping og et sportsvennlig design. Perfekt for trening og hverdagsbruk.",
+                                2490,
+                                AUDIO,
+                                List.of("https://example.com/beatsfitpro.jpg")));
 
         }
 }

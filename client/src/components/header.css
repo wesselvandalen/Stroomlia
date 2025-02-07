@@ -1,5 +1,5 @@
 .header-container {
-    background-color: #20201F;
+    background-color: #231F20;
     margin: 0 0 0 0;
 }
 
@@ -9,6 +9,7 @@
     align-items: center;
     height: 54px;
     margin: 0 15px;
+    max-width: 1263px;
 }
 
 .header-left {
