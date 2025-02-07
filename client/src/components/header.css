@@ -1,6 +1,9 @@
 .header-container {
     background-color: #231F20;
     margin: 0 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-content {
@@ -10,6 +13,7 @@
     height: 54px;
     margin: 0 15px;
     max-width: 1263px;
+    width: 100%;
 }
 
 .header-left {

@@ -2,6 +2,7 @@ import './shopping-cart-item.css';
 import { useEffect, useState, React } from "react";
 import { fetchProductById } from "../service/product-service.js";
 import { decreaseProductAmount, increaseProductAmount, removeItemFromShoppingCart } from "../service/shopping-cart-service.js";
+import { makeNumbersReadable } from '../service/utils.js';
 
 export default function ShoppingCartItem(props) {
     const [product, setProduct] = useState({});
@@ -15,7 +16,6 @@ export default function ShoppingCartItem(props) {
     const fetchProduct = async (id) => {
         try {
             const productData = await fetchProductById(id);
-            console.log(productData);
             setProduct(productData);
         } catch (error) {
             console.error("Error fetching the product:", error);
@@ -51,10 +51,10 @@ export default function ShoppingCartItem(props) {
     return (
         <div className={"shopping-cart-item-container"}>
             <div className="shopping-cart-item-title-image-container">
-                <img src={product.imagePath} alt={product.name} />
+                <img src={product.imagePaths[0]} alt={product.name} />
                 <div className="shopping-cart-item-info">
                     <h3>{product.name}</h3>
-                    <p>{product.price} kr</p>
+                    <p>{makeNumbersReadable(Number(product.price))} kr</p>
                 </div>
             </div>
             <div className="price-buttons-container">

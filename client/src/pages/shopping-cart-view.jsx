@@ -2,6 +2,7 @@ import './shopping-cart-view.css';
 import ShoppingCartItem from "../components/shopping-cart-item.jsx";
 import { useEffect, useState, React } from "react";
 import { getShoppingCart, getTotalPrice } from "../service/shopping-cart-service.js";
+import { makeNumbersReadable } from '../service/utils.js';
 
 export default function ShoppingCartView() {
     const [cartItems, setCartItems] = useState([]);
@@ -72,7 +73,7 @@ export default function ShoppingCartView() {
                             </svg>
                             Legg inn bestilling
                         </button>
-                        <p className={"total-price"}>{getTotalPrice()} kr <span className={"tax-text"}>*frakt beregnes etterpå</span></p>
+                        <p className={"total-price"}>{makeNumbersReadable(getTotalPrice())} kr <span className={"tax-text"}>*frakt beregnes etterpå</span></p>
                     </div>
                 </div>
             </div>

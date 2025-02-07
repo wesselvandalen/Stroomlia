@@ -2,11 +2,9 @@
 .product-detail-view-total-container {
     display: flex;
     flex-direction: column;
-    max-width: 1140px;
-    margin: 100px auto 40px auto;
-    padding: 20px 0;
-    background-color: #fff;
-    border-radius: 8px;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
 }
 
 /* Image Section */
@@ -14,8 +12,10 @@
     display: flex;
     justify-content: start;
     align-items: start;
-    gap: 60px;
+    flex-direction: column;
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 1263px;
 }
 
 .product-detail-view-image-container {
@@ -25,22 +25,24 @@
 }
 
 .product-detail-view-product-image {
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 300px;
-    max-height: 300px;
-    border-radius: 8px;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 500px;
+    max-height: 500px;
 }
 
 /* Information Section */
 .product-detail-view-information {
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 50%;
 }
 
 .product-detail-view-name {
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 400;
     color: #222;
     margin-bottom: 0;
     margin-top: 0;
@@ -56,12 +58,12 @@
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    margin-top: -10px;
 }
 
 .number-of-ratings {
     font-size: 0.9rem;
     color: #888;
-    margin-left: 10px;
 }
 
 .product-detail-view-price {
@@ -74,7 +76,49 @@
 .product-detail-view-description {
     font-size: 1rem;
     color: #666;
+    margin-top: 10px;
     margin-bottom: 20px;
+}
+
+.product-availability {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #2b9b62;
+}
+
+.product-availability svg {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+}
+
+/* Perks */
+
+.product-perks {
+    list-style: none;
+    margin-left: -40px;
+    margin-top: 20px;
+}
+
+.product-perks li {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 3px 0;
+}
+
+.product-perks li svg {
+    width: 14px;
+    height: 14px;
+    margin-top: -3px;
+}
+
+.perk-span {
+    color: #0A84FF;
 }
 
 /* Add to Cart Section */
@@ -85,11 +129,12 @@
 }
 
 .product-detail-view-button {
-    background-color: #000;
+    background-color: #231F20;
     color: #fff;
     border: none;
-    padding: 12px 20px;
+    padding: 13px 20px;
     font-size: .9rem;
+    margin-left: -15px;
     border-radius: 4px;
     font-weight: 500;
     cursor: pointer;
@@ -106,7 +151,7 @@
 }
 
 .product-detail-view-button:hover {
-    background-color: #333;
+    background-color: #1f1f1f;
 }
 
 .amount-input {
@@ -122,22 +167,30 @@
 
 /* Reviews Section */
 .product-detail-view-product-ratings-container {
-    margin-top: 40px;
-    border-top: 1px solid #eee;
+    margin: 0;
+    background-color: #fcfcfc;
     padding-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
 .product-detail-view-product-ratings h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    margin: 0;
+    text-align: left;
 }
 
 .product-detail-view-product-ratings {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-width: 1263px;
+    width: 100%;
 }
 
 .review-block {
@@ -163,19 +216,34 @@
     color: #f39c12;
 }
 
+/* Split */
+
+.product-info-split {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+    height: 100%;
+}
+
 /* Recommendations */
 
 .product-detail-view-recommendations {
     border-top: 1px solid #eee;
     margin-top: 30px;
+    width: 100%;
+    max-width: 1263px;
 }
 
 .product-detail-view-recommendations-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
     margin-bottom: 20px;
     margin-top: 40px;
+    text-align: left;
 }
 
 .recommendations-grid {

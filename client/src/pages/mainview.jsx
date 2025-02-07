@@ -15,6 +15,10 @@ export default function Mainview() {
                 <img src={macbookAsset} alt="MacBook Pro (16-inch, 2021) asset." className='mv-intro-graphic'/>
             </div>
 
+            <div className="mv-section">
+
+            </div>
+            
         </div>
     );
 }

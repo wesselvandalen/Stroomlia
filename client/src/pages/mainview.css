@@ -1,8 +1,17 @@
+.mv-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 .mv-section {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 1263px;
 }
 
 .mv-intro-tekst-container {

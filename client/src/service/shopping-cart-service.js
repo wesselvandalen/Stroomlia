@@ -61,7 +61,6 @@ export function removeItemFromShoppingCart(productId) {
 
         // Fjern produktet fullstendig fra handlekurven
         shoppingCart.products = shoppingCart.products.filter((product) => product.productId !== productId);
-        console.log(`Product with id ${productId} removed from shopping cart.`);
     } else {
         console.error(`The product with id ${productId} does not exist in your shopping cart, and could therefore not be removed.`);
     }

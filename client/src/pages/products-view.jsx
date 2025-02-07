@@ -2,7 +2,7 @@ import './products-view.css';
 import { fetchProducts, sortByProductCategory } from "../service/product-service.js";
 import ProductBlock from "../components/product-block.jsx";
 import { useEffect, useState, React } from "react";
-import { changeShowState, getShowState } from '../service/show-products-service.js';
+import loadingGIF from '../assets/utils/loading.gif';
 
 export default function ProductsView() {
     const [products, setProducts] = useState([]);
@@ -14,7 +14,6 @@ export default function ProductsView() {
     async function callProductsFetch() {
         try {
             const data = await fetchProducts();
-            console.log(data);
             setProducts(data);
         } catch (error) {
             console.error("Error fetching scents:", error);
@@ -22,7 +21,12 @@ export default function ProductsView() {
     }
 
     if (!products) {
-        return (<p>Lader produktene...</p>)
+        return (
+            <div className="loading-products">
+                <img src={loadingGIF} alt="Lader GIF" />
+                <p>Lader produktene...</p>
+            </div>
+        );
     }
 
     return (
