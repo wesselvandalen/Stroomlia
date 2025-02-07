@@ -4,7 +4,6 @@
     align-items: stretch;
     border: 1px solid #ddd;
     background-color: white;
-    height: 99.6%; /* Sørger for at kortet alltid fyller tilgjengelig plass */
     justify-content: space-between; /* Sikrer at innholdet sprer seg */
     width: 99.5%;
     margin: 0 1px;
@@ -64,7 +63,7 @@
 
 .product-description {
     margin: 15px 10px;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 21px;
     color: rgba(0, 0, 0, .7);
     text-decoration: none;
@@ -86,7 +85,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
 }
 
 .product-add-button {

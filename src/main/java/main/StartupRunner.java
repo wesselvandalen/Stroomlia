@@ -3,6 +3,8 @@ package main;
 import main.app.application.ProductService;
 import main.app.application.UserService;
 import main.app.domain.Product;
+import main.app.domain.ProductManual;
+import main.app.domain.ProductStatus;
 import main.app.domain.User;
 import main.app.presentation.dto.product.ProductRequestDTO;
 import main.app.presentation.dto.rating.RatingRequestDTO;
@@ -11,6 +13,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import static main.app.domain.ProductCategory.*;
+import static main.app.domain.ProductStatus.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -47,91 +50,206 @@ public class StartupRunner implements CommandLineRunner {
                                 "En kraftig smarttelefon med A15 Bionic-chip, ProMotion-skjerm og et avansert trippelkameraoppsett for fantastisk foto og video.",
                                 15990,
                                 MOBILTELEFONER,
-                                List.of("https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.large.jpg")));
+                                List.of("https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.large.jpg"),
+                                new ProductManual(
+                                                "Slå på enheten ved å holde inne sideknappen. Konfigurer Face ID, Apple ID og tilpass innstillinger etter behov. Bruk sveipebevegelser for å navigere, og aktiver alltid-på-skjerm for rask tilgang til varsler. Kameraet har nattmodus og ProRAW-funksjon for profesjonell bildekvalitet.",
+                                                List.of(
+                                                                "A16 Bionic-chip for lynrask ytelse",
+                                                                "6,1-tommers Super Retina XDR-skjerm med ProMotion (120Hz)",
+                                                                "Trippelkamera med 48 MP hovedsensor og avansert nattmodus",
+                                                                "Dynamic Island for interaktive varsler og multitasking",
+                                                                "5G-støtte for rask tilkobling"),
+                                                "Støtter iOS 16 og nyere. Kompatibel med Apple Watch, AirPods og MagSafe-tilbehør."),
+                                ProductStatus.AVAILABLE));
 
                 Product appleIphoneSE = productService.createProduct(new ProductRequestDTO(
                                 "Apple iPhone SE (3. generasjon)",
                                 "En rimelig iPhone med den kraftige A15 Bionic-chipen, et flott kamera og design inspirert av iPhone 8.",
                                 7990,
                                 MOBILTELEFONER,
-                                List.of("https://m.media-amazon.com/images/I/61A0Zu4K-TL.jpg")));
+                                List.of("https://m.media-amazon.com/images/I/61A0Zu4K-TL.jpg"),
+                                new ProductManual(
+                                                "Slå på enheten med sideknappen og følg oppstartsveiledningen. Touch ID lar deg låse opp telefonen raskt og sikkert. Kameraet har Smart HDR 4 og portrettmodus for skarpe bilder. Batterisparing kan aktiveres via Innstillinger.",
+                                                List.of(
+                                                                "A15 Bionic-chip for rask ytelse",
+                                                                "4,7-tommers Retina HD-skjerm",
+                                                                "12 MP vidvinkelkamera med portrettmodus",
+                                                                "Hjem-knapp med Touch ID for sikker autentisering",
+                                                                "5G-støtte for raskere mobilnettverk"),
+                                                "Støtter iOS 16 og nyere. Kompatibel med AirPods, Apple Watch og MagSafe-ladere."),
+                                ProductStatus.AVAILABLE));
 
-                // LAPTOPER
                 Product appleMacbookPro13 = productService.createProduct(new ProductRequestDTO(
                                 "Apple MacBook Pro 13\" (M2, 2022)",
                                 "Den ultimate MacBook for både profesjonelle og studenter, med M2-chip for eksepsjonell ytelse og batterilevetid.",
                                 16990,
                                 LAPTOPER,
-                                List.of("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-mbp13-m2-spacegray-202208?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1659374923283")));
+                                List.of("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-mbp13-m2-spacegray-202208?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1659374923283"),
+                                new ProductManual(
+                                                "Trykk på strømknappen for å starte enheten. Logg inn med Apple ID og tilpass Touch Bar. Bruk macOS-verktøy for produktivitet, og aktiver batterisparemodus for lengre batteritid.",
+                                                List.of(
+                                                                "Apple M2-chip for kraftig ytelse",
+                                                                "13,3-tommers Retina-skjerm med True Tone",
+                                                                "Touch Bar og Touch ID for enkel navigering",
+                                                                "Opptil 20 timer batteritid",
+                                                                "Aktiv kjøling for vedvarende ytelse"),
+                                                "Leveres med macOS Monterey eller nyere. Kompatibel med iCloud, AirDrop og eksterne skjermer via Thunderbolt 4."),
+                                ProductStatus.AVAILABLE));
 
                 Product appleMacbookPro16 = productService.createProduct(new ProductRequestDTO(
                                 "Apple MacBook Pro 16\" (M3 Max, 2023)",
-                                "MacBook Pro 16-tommer er den ultimate bærbare maskinen for profesjonelle. Med Apples nyeste M3 Max-chip, opptil 128 GB RAM og en fantastisk Liquid Retina XDR-skjerm, gir denne maskinen utrolig ytelse og batteritid. Perfekt for utviklere, designere og videoredigerere.",
+                                "MacBook Pro 16-tommer er den ultimate bærbare maskinen for profesjonelle. Med Apples nyeste M3 Max-chip, opptil 128 GB RAM og en fantastisk Liquid Retina XDR-skjerm, gir denne maskinen utrolig ytelse og batteritid.",
                                 52990,
                                 LAPTOPER,
                                 List.of(
                                                 "https://mac-center.com/cdn/shop/files/MacBook_Pro_16-in_Silver_PDP_Image_Position-1__ESES.jpg?v=1700303935&width=1445",
-                                                "https://cdn.awsli.com.br/2510/2510599/produto/255527541/macbook-pro-14-chip-m3-8gb-512gb-ssd-cinza-espacial-68790285-sw9k3p33hj.png")));
+                                                "https://cdn.awsli.com.br/2510/2510599/produto/255527541/macbook-pro-14-chip-m3-8gb-512gb-ssd-cinza-espacial-68790285-sw9k3p33hj.png"),
+                                new ProductManual(
+                                                "Åpne lokket og start opp maskinen. Konfigurer med Apple ID og iCloud. Bruk Touch ID for rask innlogging. Tilpass skjermens fargeinnstillinger for optimal arbeidsopplevelse, og bruk MagSafe-laderen for effektiv lading.",
+                                                List.of(
+                                                                "Apple M3 Max-chip med opptil 128 GB RAM",
+                                                                "16,2-tommers Liquid Retina XDR-skjerm",
+                                                                "Opptil 22 timers batteritid",
+                                                                "Tre Thunderbolt 4-porter, HDMI, SD-kortleser",
+                                                                "Avansert aktiv kjølesystem for maksimal ytelse"),
+                                                "Leveres med macOS Sonoma eller nyere. Full støtte for Xcode, Final Cut Pro, Adobe Suite og 3D-grafikkprogramvare."),
+                                ProductStatus.AVAILABLE));
 
-                // TVOGSKJERMER
                 Product appleProDisplayXDR32 = productService.createProduct(new ProductRequestDTO(
-                                "Apple Pro Display XDR (32\")",
-                                "Flagship-skjermen med ekstremt høy oppløsning og fargepresisjon, perfekt for profesjonelle som arbeider med grafikk, foto og video.",
-                                74990,
+                                "Apple Pro Display XDR 32\"",
+                                "En profesjonell 6K Retina-skjerm med ekstrem dynamisk rekkevidde, perfekt for kreative yrker som videoredigering og grafisk design.",
+                                49990,
                                 TVOGSKJERMER,
-                                List.of("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/pro-display-gallery1-201909?wid=4000&hei=3072&fmt=jpeg&qlt=90&.v=1574201024213")));
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/pro-display-xdr-hero-201909"),
+                                new ProductManual(
+                                                "Koble skjermen til en kompatibel Mac via Thunderbolt 3. Juster fargetemperatur og lysstyrke i macOS for optimal bildekvalitet. Bruk Pro Stand eller VESA-feste for fleksibel montering.",
+                                                List.of(
+                                                                "32-tommers 6K Retina XDR-skjerm",
+                                                                "Extreme Dynamic Range (XDR) for eksepsjonell kontrast",
+                                                                "P3 fargerom og 10-bits fargedybde",
+                                                                "1 000 000:1 kontrastforhold",
+                                                                "Nano-texture glass for redusert gjenskinn"),
+                                                "Kompatibel med macOS Catalina og nyere. Krever en Mac med Thunderbolt 3 og dedikert GPU-støtte for 6K-oppløsning."),
+                                ProductStatus.AVAILABLE));
 
                 Product appleTV4K = productService.createProduct(new ProductRequestDTO(
                                 "Apple TV 4K (2022)",
-                                "Apple TV 4K gir en enestående streamingopplevelse med 4K HDR, Dolby Atmos og den nye Siri Remote.",
-                                2990,
+                                "En kraftig mediespiller med A15 Bionic-chip, støtte for Dolby Vision og HDR10+ for en fantastisk visuell opplevelse.",
+                                2190,
                                 TVOGSKJERMER,
-                                List.of("https://www.apple.com/newsroom/images/product/tv/standard/Apple-TV-4K-hero-221018_big.jpg.large.jpg")));
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-4k-hero-select-202210"),
+                                new ProductManual(
+                                                "Koble Apple TV til en HDMI-kompatibel TV. Konfigurer med Apple ID og last ned apper fra App Store. Bruk Siri Remote for stemmestyring og navigering.",
+                                                List.of(
+                                                                "A15 Bionic-chip for lynrask ytelse",
+                                                                "Støtte for 4K HDR, Dolby Vision og HDR10+",
+                                                                "Dolby Atmos-lyd for kinoopplevelse hjemme",
+                                                                "64 GB eller 128 GB lagring for apper og innhold",
+                                                                "Siri Remote med USB-C-lading"),
+                                                "Kompatibel med iOS, macOS, HomeKit, AirPlay 2 og Bluetooth-tilbehør."),
+                                ProductStatus.AVAILABLE));
 
-                // TILBEHØR
                 Product appleAirPodsPro = productService.createProduct(new ProductRequestDTO(
                                 "Apple AirPods Pro (2. generasjon)",
-                                "Aktiv støydemping og fantastisk lydkvalitet for en bedre lytteopplevelse. Perfekt for både musikk og samtaler.",
-                                3990,
-                                TILBEHØR,
-                                List.of("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FMT_WHH?wid=750&hei=556&fmt=jpeg&qlt=90&.v=1724041668836")));
+                                "Avanserte trådløse ørepropper med aktiv støydemping og Adaptiv Transparens-modus.",
+                                3290,
+                                AUDIO,
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-gen2"),
+                                new ProductManual(
+                                                "Åpne ladeetuiet nær en iPhone eller iPad for å pare. Trykk og hold stilken for å veksle mellom støydemping og transparensmodus. Bruk Adaptive EQ for personlig lydopplevelse.",
+                                                List.of(
+                                                                "Aktiv støydemping og Adaptiv Transparens",
+                                                                "Spatial Audio med dynamisk hodesporing",
+                                                                "IPX4 svette- og vannbestandighet",
+                                                                "Touch-kontroller for volum og avspilling",
+                                                                "Opptil 6 timers lyttetid (30 timer med etui)"),
+                                                "Kompatibel med iOS 16 og nyere, macOS og Apple Watch."),
+                                ProductStatus.AVAILABLE));
 
                 Product appleMagicMouse = productService.createProduct(new ProductRequestDTO(
-                                "Apple Magic Mouse (2. generasjon)",
-                                "En elegant og funksjonell mus med berøringsfølsom overflate for rask navigasjon.",
-                                1190,
+                                "Apple Magic Mouse",
+                                "En elegant og presis trådløs mus med Multi-Touch-overflate for intuitive bevegelser.",
+                                1090,
                                 TILBEHØR,
-                                List.of("https://www.appleparts.nl//Files/5/19000/19015/ProductPhotos/1000/2015374107.jpg")));
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2E3"),
+                                new ProductManual(
+                                                "Slå på musen og koble til via Bluetooth. Bruk Multi-Touch-overflaten for å scrolle, sveipe og zoome i macOS.",
+                                                List.of(
+                                                                "Trådløs med innebygd oppladbart batteri",
+                                                                "Multi-Touch-overflate for presis navigering",
+                                                                "Opptil én måneds batteritid",
+                                                                "Bluetooth-tilkobling uten ekstra mottaker",
+                                                                "Designet for macOS-bruk"),
+                                                "Kompatibel med macOS Monterey og nyere. Støtter iPadOS for begrenset bruk."),
+                                ProductStatus.AVAILABLE));
 
-                // KLOKKER
                 Product appleWatchSeries8 = productService.createProduct(new ProductRequestDTO(
                                 "Apple Watch Series 8",
-                                "Den nyeste smartklokken fra Apple med helse- og treningsfunksjoner, alltid på-skjerm og batterilevetid som varer hele dagen.",
+                                "En avansert smartklokke med EKG, temperatursensor og krasjdeteksjon for økt sikkerhet.",
                                 4990,
                                 KLOKKER,
-                                List.of("https://www.apple.com/newsroom/images/product/watch/lifestyle/Apple-Watch-SE-aluminum-silver-220907_inline.jpg.large.jpg")));
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-watch-series-8"),
+                                new ProductManual(
+                                                "Trykk på sideknappen for å slå på klokken. Koble til iPhone via Apple Watch-appen. Tilpass urskiver og aktiver helseovervåkning.",
+                                                List.of(
+                                                                "EKG- og oksygenmåling",
+                                                                "Temperatursensor for helseanalyse",
+                                                                "Krasjdeteksjon og nødanrop",
+                                                                "Always-On Retina-skjerm",
+                                                                "Støtte for Apple Pay og Siri"),
+                                                "Krever iPhone 8 eller nyere med iOS 16 eller nyere."),
+                                ProductStatus.AVAILABLE));
 
                 Product appleWatchSE = productService.createProduct(new ProductRequestDTO(
                                 "Apple Watch SE (2. generasjon)",
-                                "En rimelig smartklokke med de viktigste helse- og treningsfunksjonene, designet for alle som ønsker å holde seg aktiv.",
-                                3490,
+                                "En rimelig Apple Watch med viktige helse- og treningsfunksjoner.",
+                                3290,
                                 KLOKKER,
-                                List.of("https://shorturl.at/4oTtc")));
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-watch-se-hero"),
+                                new ProductManual(
+                                                "Slå på klokken ved å holde inne sideknappen. Koble til en iPhone og synkroniser helse- og treningsdata via Apple Health.",
+                                                List.of(
+                                                                "Retina-skjerm med høy lysstyrke",
+                                                                "Pulsmåling og treningsregistrering",
+                                                                "Nødanrop og fallregistrering",
+                                                                "Støtte for Apple Pay",
+                                                                "Opptil 18 timers batteritid"),
+                                                "Krever iPhone 8 eller nyere med iOS 16 eller nyere."),
+                                ProductStatus.AVAILABLE));
 
-                // AUDIO
                 Product appleAirPodsMax = productService.createProduct(new ProductRequestDTO(
                                 "Apple AirPods Max",
-                                "Over-ear hodetelefoner med aktiv støydemping, eksepsjonell lydkvalitet og lang batterilevetid.",
-                                7990,
+                                "Premium trådløse hodetelefoner med Hi-Fi-lyd og aktiv støydemping.",
+                                6990,
                                 AUDIO,
-                                List.of("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-max-select-202409-midnight_FV1_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=1725492894525")));
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-hero"),
+                                new ProductManual(
+                                                "Slå på ved å trykke på knappen på høyre øreklokke. Koble til via Bluetooth eller automatisk med Apple-enheter.",
+                                                List.of(
+                                                                "Hi-Fi-lyd med Adaptive EQ",
+                                                                "Aktiv støydemping og Transparensmodus",
+                                                                "Spatial Audio med dynamisk hodesporing",
+                                                                "Digital Crown for volum- og avspillingskontroll",
+                                                                "Opptil 20 timers batteritid"),
+                                                "Kompatibel med iOS, iPadOS, macOS og Apple TV."),
+                                ProductStatus.AVAILABLE));
 
                 Product beatsFitPro = productService.createProduct(new ProductRequestDTO(
                                 "Beats Fit Pro",
-                                "Trådløse øretelefoner med aktiv støydemping og et sportsvennlig design. Perfekt for trening og hverdagsbruk.",
+                                "Trådløse ørepropper med romtilpasset lyd og aktiv støydemping, designet for trening og daglig bruk.",
                                 2490,
                                 AUDIO,
-                                List.of("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MK2F3?wid=5332&hei=3555&fmt=jpeg&qlt=95&.v=1634663474000")));
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/beats-fit-pro"),
+                                new ProductManual(
+                                                "Åpne ladeetuiet og hold det nær en iPhone for rask tilkobling. Juster vinger for best passform, og veksle mellom støydemping og Transparensmodus ved å trykke på øreproppen.",
+                                                List.of(
+                                                                "Aktiv støydemping og Transparensmodus",
+                                                                "Spatial Audio med dynamisk hodesporing",
+                                                                "IPX4 vann- og svettebestandighet",
+                                                                "Opptil 6 timer lyttetid (24 timer med etui)",
+                                                                "Kompatibel med iOS og Android"),
+                                                "Kompatibel med iOS, macOS, Android og Windows via Bluetooth."),
+                                ProductStatus.AVAILABLE));
 
                 // Anmeldelser
                 this.productService.writeRating(appleIphone14Pro.getId(), new RatingRequestDTO(5,

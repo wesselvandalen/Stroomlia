@@ -6,12 +6,14 @@ import TopAnnouncement from './components/top-announcement';
 import ShoppingCartView from './pages/shopping-cart-view';
 import ProductsView from './pages/products-view';
 import ProductDetailView from './pages/products-detail-view';
+import SpecialMessage from './components/special-message';
 
 export default function App() {
   return (
     <div className="App">
       <Router>
         <div className="top-announcement-container">
+          <SpecialMessage/>
           <TopAnnouncement/>
           <Header />
         </div>

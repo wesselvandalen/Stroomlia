@@ -44,9 +44,19 @@ export default function ShoppingCartItem(props) {
         window.location.reload();
     };
 
-    if (!product) {
-        return <div>Lader produktet...</div>;
+    function isEmpty(obj) {
+        for (const prop in obj) {
+          if (Object.hasOwn(obj, prop)) {
+            return false;
+          }
+        }
+      
+        return true;
     }
+
+    if (!product || product === undefined || product === null || isEmpty(product)) {
+        return (<div>Lader produktet...</div>);
+    };
 
     return (
         <div className={"shopping-cart-item-container"}>

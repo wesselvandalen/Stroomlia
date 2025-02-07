@@ -9,6 +9,8 @@ import main.app.presentation.dto.product.ProductRequestDTO;
 import main.app.presentation.dto.rating.RatingRequestDTO;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -18,13 +20,14 @@ import java.util.Optional;
 public class ProductService {
 
     private final ProductRepository productRepository;
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
     public Product createProduct(ProductRequestDTO dto) {
-        Product product = new Product(dto.getName(), dto.getDescription(), dto.getPrice(), dto.getProductCategory(), dto.getImagePaths());
+        Product product = new Product(dto.getName(), dto.getDescription(), dto.getPrice(), dto.getProductCategory(), dto.getImagePaths(), dto.getProductManual(), dto.getProductStatus());
         this.productRepository.save(product);
         return product;
     }

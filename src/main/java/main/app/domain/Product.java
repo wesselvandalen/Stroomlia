@@ -16,8 +16,11 @@ public class Product {
     private String name;
     @Column(columnDefinition = "LONGTEXT")
     private String description;
+    @Column(columnDefinition = "LONGTEXT")
     // Prisen er i norske kroner
     private double price;
+    @Enumerated
+    private ProductStatus productStatus;
     @ManyToMany(cascade = ALL)
     private List<Rating> ratings;
     // Kategorien produktet tilhører (laptoper, TV og skjermer, tilbehør osv.)
@@ -26,17 +29,29 @@ public class Product {
     private List<String> imagePaths;
     private int averageRating;
     private int numberOfRatings;
+    @OneToOne(cascade = CascadeType.ALL) // Ensures ProductManual is saved automatically
+    private ProductManual productManual;
 
     protected Product() { }
-    public Product(String name, String description, double price, ProductCategory productCategory, List<String> imagePaths) {
+    public Product(String name, String description, double price, ProductCategory productCategory, List<String> imagePaths, ProductManual productManual, ProductStatus productStatus) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.ratings = new ArrayList<>();
         this.productCategory = productCategory;
+        this.productManual = productManual;
         this.imagePaths = imagePaths;
+        this.productStatus = productStatus;
         updateAverageRating();
         this.numberOfRatings = ratings.size();   
+    }
+
+    public ProductManual getProductManual() {
+        return productManual;
+    }
+
+    public ProductStatus getProductStatus() {
+        return productStatus;
     }
 
     public int getNumberOfRatings() {

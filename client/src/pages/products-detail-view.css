@@ -14,8 +14,9 @@
     align-items: start;
     flex-direction: column;
     margin-bottom: 20px;
+    margin-top: -40px;
     width: 100%;
-    max-width: 1263px;
+    max-width: 1223px;
 }
 
 .product-detail-view-image-container {
@@ -25,10 +26,10 @@
 }
 
 .product-detail-view-product-image {
-    min-width: 500px;
-    max-width: 500px;
-    min-height: 500px;
-    max-height: 500px;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 400px;
+    max-height: 400px;
 }
 
 /* Information Section */
@@ -37,7 +38,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    width: 50%;
+    width: 60%;
 }
 
 .product-detail-view-name {
@@ -121,6 +122,40 @@
     color: #0A84FF;
 }
 
+/* pdv-section */
+
+.pdv-section {
+    background-color: #fafafa;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pdv-section-content {
+    width: 100%;
+    max-width: 1223px;
+    margin: 20px 0;
+}
+
+.pdv-section-content h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: -5px;
+}
+
+.pdv-section-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.pdv-section-content li {
+    font-size: 1rem;
+    color: #666;
+    margin: 3px 0;
+}
+
 /* Add to Cart Section */
 .product-add-button-container {
     display: flex;
@@ -168,7 +203,7 @@
 /* Reviews Section */
 .product-detail-view-product-ratings-container {
     margin: 0;
-    background-color: #fcfcfc;
+    background-color: #ffffff;
     padding-top: 30px;
     width: 100%;
     display: flex;
@@ -189,7 +224,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 1263px;
+    max-width: 1223px;
     width: 100%;
 }
 
@@ -230,10 +265,8 @@
 /* Recommendations */
 
 .product-detail-view-recommendations {
-    border-top: 1px solid #eee;
-    margin-top: 30px;
     width: 100%;
-    max-width: 1263px;
+    max-width: 1223px;
 }
 
 .product-detail-view-recommendations-title {

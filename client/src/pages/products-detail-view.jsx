@@ -59,8 +59,35 @@ export default function ProductDetailView() {
     }
 
     const ratings = product.numberOfRatings === 0 ? 'Ingen anmeldelser ennå' : product.numberOfRatings;
+    
+    function checkAvailability() {
+        const status = product.productStatus;
 
-    console.log(product);
+        if (status === "AVAILABLE") {
+            return 'På lager';
+        } else if (status === "") {
+            return "";
+        } else {
+            return "Ikke på lager";
+        }
+    }
+
+    function parseStringToList(inputString) {
+        try {
+            // Gjør Stringen om til en liste med JSON.parse
+            const list = JSON.parse(inputString);
+            
+            // Sjekk om det er en liste
+            if (Array.isArray(list)) {
+                return list;
+            } else {
+                throw new Error("Parsed value is not an array");
+            }
+        } catch (error) {
+            console.error("Invalid input string:", error);
+            return [];
+        }
+    }
 
     return (
         <div className="product-detail-view-container">
@@ -141,6 +168,23 @@ export default function ProductDetailView() {
                         </div>
                     </div>
 
+                </div>
+
+                <div className="pdv-section">
+                    <div className="pdv-section-content">
+                        <h3>Bruksanvisning til {product.name}</h3>
+                        <p>{product.productManual.instructions}</p>
+
+                        <h3>Hovedfunksjoner</h3>
+                        <ul>
+                            {parseStringToList(product.productManual.mainFeatures).map((feature, index) => {
+                                return <li key={index}>{feature}</li>
+                            })}
+                        </ul>
+
+                        <h3>Kompatibilitet og Programvare</h3>
+                        <p>{product.productManual.compatibilityAndSoftware}</p>
+                    </div>
                 </div>
 
                 {product.ratings.length > 0 ?

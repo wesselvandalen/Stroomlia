@@ -2,6 +2,8 @@ package main.app.presentation.dto.product;
 
 import main.app.domain.Product;
 import main.app.domain.ProductCategory;
+import main.app.domain.ProductManual;
+import main.app.domain.ProductStatus;
 import main.app.domain.Rating;
 
 import java.util.List;
@@ -17,6 +19,8 @@ public class ProductResponseDTO {
     private int averageRating;
     private int numberOfRatings;
     private ProductCategory productCategory;
+    private ProductManual productManual;
+    private ProductStatus productStatus;
 
     public ProductResponseDTO(Product product) {
         this.id = product.getId();
@@ -27,7 +31,17 @@ public class ProductResponseDTO {
         this.imagePaths = product.getImagePaths();
         this.averageRating = product.getAverageRating();
         this.numberOfRatings = product.getNumberOfRatings();
+        this.productManual = product.getProductManual();
         this.productCategory = product.getProductCategory();
+        this.productStatus = product.getProductStatus();
+    }
+
+    public ProductStatus getProductStatus() {
+        return productStatus;
+    }
+
+    public ProductManual getProductManual() {
+        return productManual;
     }
 
     public int getNumberOfRatings() {
