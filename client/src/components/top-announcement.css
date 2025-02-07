@@ -1,0 +1,30 @@
+.top-container {
+    background-color: #fdfdfd;
+    width: 100%;
+    padding: 0;
+    height: 35px;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.top-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.top-content a {
+    color: #000;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.top-content a:hover {
+    text-decoration: #000 underline;
+}

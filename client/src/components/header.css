@@ -1,6 +1,6 @@
 .header-container {
     background-color: #20201F;
-    margin: 0;
+    margin: 0 0 0 0;
 }
 
 .header-content {
@@ -20,16 +20,33 @@
 
 .header-logo {
     width: 30px;
+    margin: 0 20px -3px -5px;
+}
+
+.header-links {
+    margin-top: -3px;
 }
 
 .header-links a {
     color: white;
     text-decoration: none;
     margin-right: 20px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
 }
 
 .header-links a:hover {
     text-decoration: white underline;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right a svg {
+    width: 20px;
+    height: 20px;
+    color: white;
 }
