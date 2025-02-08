@@ -10,6 +10,7 @@ import SpecialMessage from './components/special-message';
 import SosView from './pages/sosview';
 import ContactView from './pages/contactview';
 import AboutView from './pages/aboutview';
+import OrderingView from './pages/ordering-view';
 
 export default function App() {
   return (
@@ -29,6 +30,8 @@ export default function App() {
             <Route path={"/sos"} element={<SosView/>}/>
             <Route path={"/kontakt"} element={<ContactView/>}/>
             <Route path={"/omoss"} element={<AboutView/>}/>
+            <Route path={"/bestilling"} element={<OrderingView/>}/>            
+
           </Routes>
         </div>
       </Router>

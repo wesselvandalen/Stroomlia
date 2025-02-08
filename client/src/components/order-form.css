@@ -1,0 +1,68 @@
+/* Form Container */
+.form-container {
+    width: 100%;
+    background-color: #fff;
+    max-width: 1223px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Terms Section */
+.terms-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.terms-text a {
+    color: #555;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.terms-text a:hover {
+    text-decoration: none;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #eaeaea;
+    border-color: #d0d0d0;
+}
+
+/* Additional Spacing for Readability */
+.form-container > * {
+    margin-bottom: 20px;
+}
+
+.form-container > *:last-child {
+    margin-bottom: 0;
+}

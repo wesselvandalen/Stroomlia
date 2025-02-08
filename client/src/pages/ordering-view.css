@@ -1,0 +1,14 @@
+.ordering-view-container {
+    color: black;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ordering-header-container > * {
+    color: black;
+}

@@ -20,7 +20,7 @@ export default function ShoppingCartView() {
     };
 
     const handleOrderButton = () => {
-        window.location.replace(`/order/`);
+        window.location.replace(`/bestilling/`);
     };
 
     if (!cartItems) {
@@ -44,7 +44,7 @@ export default function ShoppingCartView() {
                             <h2>Handlekurv</h2>
                         </div>
                         <p>Din handlekurv fylt med smart teknologi – klart til å bli levert!</p>
-                        <p>Det er ganske tomt her ute...</p>
+                        <p>Det er ganske stille her...</p>
                     </div>
                 </div>
             </div>

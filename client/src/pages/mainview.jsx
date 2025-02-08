@@ -15,7 +15,7 @@ export default function Mainview() {
 
     async function loadProducts() {
         const productData = await fetchProducts();
-        setProducts(getRandomItems(productData, 4));
+        setProducts(getRandomItems(productData, 3));
     }
 
     const perks = [
