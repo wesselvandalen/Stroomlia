@@ -4,6 +4,7 @@ import { useEffect, useState, React } from "react";
 import { getShoppingCart, getTotalPrice } from "../service/shopping-cart-service.js";
 import { makeNumbersReadable } from '../service/utils.js';
 import loadingGIF from '../assets/utils/loading.gif';
+import Footer from '../components/footer.jsx';
 
 export default function ShoppingCartView() {
     const [cartItems, setCartItems] = useState([]);
@@ -47,6 +48,7 @@ export default function ShoppingCartView() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     };
 
@@ -84,6 +86,7 @@ export default function ShoppingCartView() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }

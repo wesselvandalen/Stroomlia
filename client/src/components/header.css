@@ -30,6 +30,8 @@
 
 .header-links {
     margin-top: -3px;
+    display: flex;
+    align-items: center;
 }
 
 .header-links a {
@@ -38,10 +40,19 @@
     margin-right: 20px;
     font-size: 13px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }
 
 .header-links a:hover {
     text-decoration: white underline;
+}
+
+.header-links a svg {
+    width: 16px;
+    height: 16px;
+    margin: -2px 0 0 0;
 }
 
 .header-right {

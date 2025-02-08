@@ -3,6 +3,7 @@ import { fetchProducts, sortByProductCategory } from "../service/product-service
 import ProductBlock from "../components/product-block.jsx";
 import { useEffect, useState, React } from "react";
 import loadingGIF from '../assets/utils/loading.gif';
+import Footer from '../components/footer.jsx';
 
 export default function ProductsView() {
     const [products, setProducts] = useState([]);
@@ -99,6 +100,7 @@ export default function ProductsView() {
 
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }

@@ -1,0 +1,33 @@
+.sos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sos-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    margin-top: -50px;
+    max-width: 1223px;
+}
+
+.sos-content h1 {
+    color: #333;
+}
+
+.sos-content h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: -5px;
+}
+
+.sos-content p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0 30px 0;
+}

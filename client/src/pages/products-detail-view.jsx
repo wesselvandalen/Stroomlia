@@ -1,8 +1,8 @@
 import './products-detail-view.css';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchProductById, getRandomItems, getRandomProductsByCategory } from "../service/product-service.js";
-import ReviewStars from "../components/review-stars.jsx";
+import { fetchProductById, fetchProducts, getRandomItems, getRandomProductsByCategory } from "../service/product-service.js";
+import Footer from '../components/footer.jsx';
 import ReviewBlock from "../components/review-block.jsx";
 import { addItemToShoppingCart } from "../service/shopping-cart-service.js";
 import ProductBlock from '../components/product-block.jsx';
@@ -22,6 +22,7 @@ export default function ProductDetailView() {
     const fetchProduct = async (id) => {
         try {
             const productData = await fetchProductById(id);
+            getProductsByCategory();
             setProduct(productData);
         } catch (error) {
             console.error("Error fetching the product:", error);
@@ -48,9 +49,9 @@ export default function ProductDetailView() {
         return <div>Loading your product...</div>;
     }
 
-    async function getProductsByCategory(productCategory) {
-        const data = await getRandomProductsByCategory(productCategory);
-        setRandomProducts(getRandomItems(data, 4));
+    async function getProductsByCategory() {
+        const data = await fetchProducts();
+        setRandomProducts(getRandomItems(data, 3));
     }
 
     let productRatings = product.ratings;
@@ -226,6 +227,7 @@ export default function ProductDetailView() {
 
             </div>
 
+            <Footer/>
         </div>
     );
 }

@@ -47,7 +47,7 @@
     margin-top: 50px;
     animation: slideUp 1.3s ease-out forwards;
     animation-delay: .3s;
-    /* Rask start, sakte slutt */
+    opacity: 0;
 }
 
 /* Effekt for å få noe til å komme opp fra bunnen */

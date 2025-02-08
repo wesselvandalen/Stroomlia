@@ -7,6 +7,9 @@ import ShoppingCartView from './pages/shopping-cart-view';
 import ProductsView from './pages/products-view';
 import ProductDetailView from './pages/products-detail-view';
 import SpecialMessage from './components/special-message';
+import SosView from './pages/sosview';
+import ContactView from './pages/contactview';
+import AboutView from './pages/aboutview';
 
 export default function App() {
   return (
@@ -23,6 +26,9 @@ export default function App() {
             <Route path={"/handlekurv"} element={<ShoppingCartView />} />
             <Route path={"/produkter"} element={<ProductsView/>}/>
             <Route path={"/produkter/:productId"} element={<ProductDetailView/>}/>
+            <Route path={"/sos"} element={<SosView/>}/>
+            <Route path={"/kontakt"} element={<ContactView/>}/>
+            <Route path={"/omoss"} element={<AboutView/>}/>
           </Routes>
         </div>
       </Router>

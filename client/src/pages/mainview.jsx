@@ -1,5 +1,6 @@
 import './mainview.css';
 import macbookAsset from '../assets/graphics/macbook.png';
+import Footer from '../components/footer';
 
 export default function Mainview() {
 
@@ -18,7 +19,8 @@ export default function Mainview() {
             <div className="mv-section">
 
             </div>
-            
+
+            <Footer/>
         </div>
     );
 }

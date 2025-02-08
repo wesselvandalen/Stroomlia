@@ -5,6 +5,8 @@
     border: 1px solid #ddd;
     background-color: white;
     justify-content: space-between; /* Sikrer at innholdet sprer seg */
+    min-height: 520px;
+    max-height: 520px;
     width: 99.5%;
     margin: 0 1px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
