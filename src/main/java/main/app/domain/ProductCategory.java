@@ -6,7 +6,7 @@ public enum ProductCategory {
     LAPTOPER,
     TVOGSKJERMER,
     TILBEHØR,
-    KLOKKER,
+    SMARTKLOKKER,
     AUDIO
 
 }

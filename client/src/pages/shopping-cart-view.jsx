@@ -5,10 +5,10 @@ import { getShoppingCart, getTotalPrice } from "../service/shopping-cart-service
 import { makeNumbersReadable } from '../service/utils.js';
 import loadingGIF from '../assets/utils/loading.gif';
 import Footer from '../components/footer.jsx';
+import { strokeWidth } from '../service/config.js';
 
 export default function ShoppingCartView() {
     const [cartItems, setCartItems] = useState([]);
-    const strokeWidth = 2;
 
     useEffect(() => {
         fetchShoppingCartItems();

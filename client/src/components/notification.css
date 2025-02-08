@@ -1,0 +1,13 @@
+.notification-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e6ffe6;
+    color: #075a36;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: #075a36 solid 1px;
+    z-index: 1000;
+    font-size: 16px;
+    font-weight: 400;
+}

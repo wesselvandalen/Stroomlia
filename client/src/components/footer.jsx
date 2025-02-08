@@ -24,7 +24,7 @@ export default function Footer() {
                             </div>
                             <div className="footer-row">
                                 <a href="">Tilbehør</a>
-                                <a href="">Klokker</a>
+                                <a href="">Smartklokker</a>
                                 <a href="">Audio</a>
                             </div>
                         </div>

@@ -50,7 +50,7 @@ public class StartupRunner implements CommandLineRunner {
                                 "En kraftig smarttelefon med A15 Bionic-chip, ProMotion-skjerm og et avansert trippelkameraoppsett for fantastisk foto og video.",
                                 15990,
                                 MOBILTELEFONER,
-                                List.of("https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.large.jpg"),
+                                List.of("https://files.refurbed.com/ii/iphone-14-pro-1662623168.jpg", "https://www.handyrettung.at/wp-content/uploads/2023/03/ip.14.pro_.max_.alle_.png"),
                                 new ProductManual(
                                                 "Slå på enheten ved å holde inne sideknappen. Konfigurer Face ID, Apple ID og tilpass innstillinger etter behov. Bruk sveipebevegelser for å navigere, og aktiver alltid-på-skjerm for rask tilgang til varsler. Kameraet har nattmodus og ProRAW-funksjon for profesjonell bildekvalitet.",
                                                 List.of(
@@ -60,14 +60,14 @@ public class StartupRunner implements CommandLineRunner {
                                                                 "Dynamic Island for interaktive varsler og multitasking",
                                                                 "5G-støtte for rask tilkobling"),
                                                 "Støtter iOS 16 og nyere. Kompatibel med Apple Watch, AirPods og MagSafe-tilbehør."),
-                                ProductStatus.AVAILABLE));
+                                ProductStatus.LIMITED));
 
                 Product appleIphoneSE = productService.createProduct(new ProductRequestDTO(
                                 "Apple iPhone SE (3. generasjon)",
                                 "En rimelig iPhone med den kraftige A15 Bionic-chipen, et flott kamera og design inspirert av iPhone 8.",
                                 7990,
                                 MOBILTELEFONER,
-                                List.of("https://m.media-amazon.com/images/I/61A0Zu4K-TL.jpg"),
+                                List.of("https://cdn.webshopapp.com/shops/351150/files/459201562/1652x1652x2/apple-iphone-se-2020-64gb-refurbished-smartphone-m.jpg"),
                                 new ProductManual(
                                                 "Slå på enheten med sideknappen og følg oppstartsveiledningen. Touch ID lar deg låse opp telefonen raskt og sikkert. Kameraet har Smart HDR 4 og portrettmodus for skarpe bilder. Batterisparing kan aktiveres via Innstillinger.",
                                                 List.of(
@@ -84,7 +84,7 @@ public class StartupRunner implements CommandLineRunner {
                                 "Den ultimate MacBook for både profesjonelle og studenter, med M2-chip for eksepsjonell ytelse og batterilevetid.",
                                 16990,
                                 LAPTOPER,
-                                List.of("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-mbp13-m2-spacegray-202208?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1659374923283"),
+                                List.of("https://www.forza-refurbished.nl/media/catalog/product/cache/9ba303bd5937bdef953006c58868d903/m/a/macbook-pro-13-inch-m1-2020-zilver-voorkant.jpg", "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-mbp13touchbar-performance-silver-gallery-2020?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1591921673000"),
                                 new ProductManual(
                                                 "Trykk på strømknappen for å starte enheten. Logg inn med Apple ID og tilpass Touch Bar. Bruk macOS-verktøy for produktivitet, og aktiver batterisparemodus for lengre batteritid.",
                                                 List.of(
@@ -94,7 +94,7 @@ public class StartupRunner implements CommandLineRunner {
                                                                 "Opptil 20 timer batteritid",
                                                                 "Aktiv kjøling for vedvarende ytelse"),
                                                 "Leveres med macOS Monterey eller nyere. Kompatibel med iCloud, AirDrop og eksterne skjermer via Thunderbolt 4."),
-                                ProductStatus.AVAILABLE));
+                                ProductStatus.UNAVAILABLE));
 
                 Product appleMacbookPro16 = productService.createProduct(new ProductRequestDTO(
                                 "Apple MacBook Pro 16\" (M3 Max, 2023)",
@@ -120,7 +120,8 @@ public class StartupRunner implements CommandLineRunner {
                                 "En profesjonell 6K Retina-skjerm med ekstrem dynamisk rekkevidde, perfekt for kreative yrker som videoredigering og grafisk design.",
                                 49990,
                                 TVOGSKJERMER,
-                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/pro-display-xdr-hero-201909"),
+                                List.of("https://gfx3.senetic.com/akeneo-catalog/e/4/e/5/e4e5a5db2c3ade82cbcd6f44849a26c7fee1caa8_1690708_MWPE2MP_A_image3.jpg",
+                                "https://upgreatest.nl/images/products/pro-display-4.jpg"),
                                 new ProductManual(
                                                 "Koble skjermen til en kompatibel Mac via Thunderbolt 3. Juster fargetemperatur og lysstyrke i macOS for optimal bildekvalitet. Bruk Pro Stand eller VESA-feste for fleksibel montering.",
                                                 List.of(
@@ -130,14 +131,15 @@ public class StartupRunner implements CommandLineRunner {
                                                                 "1 000 000:1 kontrastforhold",
                                                                 "Nano-texture glass for redusert gjenskinn"),
                                                 "Kompatibel med macOS Catalina og nyere. Krever en Mac med Thunderbolt 3 og dedikert GPU-støtte for 6K-oppløsning."),
-                                ProductStatus.AVAILABLE));
+                                ProductStatus.LIMITED));
 
                 Product appleTV4K = productService.createProduct(new ProductRequestDTO(
                                 "Apple TV 4K (2022)",
                                 "En kraftig mediespiller med A15 Bionic-chip, støtte for Dolby Vision og HDR10+ for en fantastisk visuell opplevelse.",
                                 2190,
                                 TVOGSKJERMER,
-                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-4k-hero-select-202210"),
+                                List.of("https://m.media-amazon.com/images/I/51Y-Dulc3bL._AC_SL1024_.jpg",
+                                "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111929_appletv4k.png"),
                                 new ProductManual(
                                                 "Koble Apple TV til en HDMI-kompatibel TV. Konfigurer med Apple ID og last ned apper fra App Store. Bruk Siri Remote for stemmestyring og navigering.",
                                                 List.of(
@@ -154,7 +156,8 @@ public class StartupRunner implements CommandLineRunner {
                                 "Avanserte trådløse ørepropper med aktiv støydemping og Adaptiv Transparens-modus.",
                                 3290,
                                 AUDIO,
-                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-gen2"),
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-gen2",
+                                "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MUYG3_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1701189162296"),
                                 new ProductManual(
                                                 "Åpne ladeetuiet nær en iPhone eller iPad for å pare. Trykk og hold stilken for å veksle mellom støydemping og transparensmodus. Bruk Adaptive EQ for personlig lydopplevelse.",
                                                 List.of(
@@ -164,14 +167,15 @@ public class StartupRunner implements CommandLineRunner {
                                                                 "Touch-kontroller for volum og avspilling",
                                                                 "Opptil 6 timers lyttetid (30 timer med etui)"),
                                                 "Kompatibel med iOS 16 og nyere, macOS og Apple Watch."),
-                                ProductStatus.AVAILABLE));
+                                ProductStatus.LIMITED));
 
                 Product appleMagicMouse = productService.createProduct(new ProductRequestDTO(
                                 "Apple Magic Mouse",
                                 "En elegant og presis trådløs mus med Multi-Touch-overflate for intuitive bevegelser.",
                                 1090,
                                 TILBEHØR,
-                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2E3"),
+                                List.of("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MXK53_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1730508287095",
+                                "https://www.partly.nl/wp-content/uploads/2023/02/Apple-Magic-Mouse-3-600x600-1.png.webp"),
                                 new ProductManual(
                                                 "Slå på musen og koble til via Bluetooth. Bruk Multi-Touch-overflaten for å scrolle, sveipe og zoome i macOS.",
                                                 List.of(
@@ -187,8 +191,8 @@ public class StartupRunner implements CommandLineRunner {
                                 "Apple Watch Series 8",
                                 "En avansert smartklokke med EKG, temperatursensor og krasjdeteksjon for økt sikkerhet.",
                                 4990,
-                                KLOKKER,
-                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-watch-series-8"),
+                                SMARTKLOKKER,
+                                List.of("https://www.partly.nl/wp-content/uploads/2023/11/Apple-Watch-Series-8-45mm-Middernacht-Aluminium-Middernacht-Sportband.png"),
                                 new ProductManual(
                                                 "Trykk på sideknappen for å slå på klokken. Koble til iPhone via Apple Watch-appen. Tilpass urskiver og aktiver helseovervåkning.",
                                                 List.of(
@@ -198,14 +202,14 @@ public class StartupRunner implements CommandLineRunner {
                                                                 "Always-On Retina-skjerm",
                                                                 "Støtte for Apple Pay og Siri"),
                                                 "Krever iPhone 8 eller nyere med iOS 16 eller nyere."),
-                                ProductStatus.AVAILABLE));
+                                ProductStatus.UNAVAILABLE));
 
                 Product appleWatchSE = productService.createProduct(new ProductRequestDTO(
                                 "Apple Watch SE (2. generasjon)",
                                 "En rimelig Apple Watch med viktige helse- og treningsfunksjoner.",
                                 3290,
-                                KLOKKER,
-                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-watch-se-hero"),
+                                SMARTKLOKKER,
+                                List.of("https://shorturl.at/3yKCa"),
                                 new ProductManual(
                                                 "Slå på klokken ved å holde inne sideknappen. Koble til en iPhone og synkroniser helse- og treningsdata via Apple Health.",
                                                 List.of(
@@ -222,7 +226,8 @@ public class StartupRunner implements CommandLineRunner {
                                 "Premium trådløse hodetelefoner med Hi-Fi-lyd og aktiv støydemping.",
                                 6990,
                                 AUDIO,
-                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-hero"),
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-hero", 
+                                "https://bsimg.nl/images/apple-airpods-max-zwart_1.png/5ZfPC-JZASXOYo1iWngZ7xR-Tak%3D/fit-in/365x365/filters%3Aformat%28png%29%3Aupscale%28%29"),
                                 new ProductManual(
                                                 "Slå på ved å trykke på knappen på høyre øreklokke. Koble til via Bluetooth eller automatisk med Apple-enheter.",
                                                 List.of(
@@ -239,7 +244,8 @@ public class StartupRunner implements CommandLineRunner {
                                 "Trådløse ørepropper med romtilpasset lyd og aktiv støydemping, designet for trening og daglig bruk.",
                                 2490,
                                 AUDIO,
-                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/beats-fit-pro"),
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/beats-fit-pro",
+                                "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/beats-fit-pro/pdp/product-carousel/black/pc-fit-pro-black-case-open.jpg"),
                                 new ProductManual(
                                                 "Åpne ladeetuiet og hold det nær en iPhone for rask tilkobling. Juster vinger for best passform, og veksle mellom støydemping og Transparensmodus ved å trykke på øreproppen.",
                                                 List.of(

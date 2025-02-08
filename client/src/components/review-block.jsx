@@ -31,13 +31,10 @@ export default function ReviewBlock(rating) {
     return (
         <div className="rating-block-container">
             <div className="rating-split">
-                <img className="rating-block-user-profile-image" src={user.imagePath} alt={user.name}/>
-                <p>{user.name}</p>
+                <p>{user.name}, {rating.numberOfStars}/5</p>
+                
             </div>
             <div className="rating-block-content">
-                <ReviewStars
-                    numberOfStars={rating.numberOfStars}
-                />
                 <p>{rating.comment}</p>
             </div>
         </div>

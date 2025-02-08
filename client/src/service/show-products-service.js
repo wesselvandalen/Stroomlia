@@ -14,7 +14,7 @@ export function getShowState(category) {
 }
 
 export function selectOneCategory(category) {
-    const categories = ['mobiltelefoner', 'laptoper', 'tvogskjermer', 'tilbehør', 'klokker', 'audio'];
+    const categories = ['mobiltelefoner', 'laptoper', 'tvogskjermer', 'tilbehør', 'smartklokker', 'audio'];
 
     categories.forEach((cat) => {
         const newState = cat.toUpperCase() === category.toUpperCase();
