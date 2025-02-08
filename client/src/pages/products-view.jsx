@@ -30,6 +30,15 @@ export default function ProductsView() {
         }
     }
 
+    if (!products) {
+        return (
+            <div className="loading-products">
+                <img src={loadingGIF} alt="Lader GIF" />
+                <p>Lader produktene...</p>
+            </div>
+        );
+    }
+
     const handleCategoryChange = (e) => {
         const { name, checked } = e.target;
         setSelectedCategories((prev) => ({
@@ -39,36 +48,28 @@ export default function ProductsView() {
     };
 
     const filteredProducts = products.filter((product) => {
-        if (selectedCategories.mobiltelefoner && product.category === 'mobiltelefoner') {
+        const category = product.productCategory.toLowerCase();
+        if (selectedCategories.mobiltelefoner && category === 'mobiltelefoner') {
             return true;
         }
-        if (selectedCategories.laptoper && product.category === 'laptoper') {
+        if (selectedCategories.laptoper && category === 'laptoper') {
             return true;
         }
-        if (selectedCategories.laptoper && product.category === 'tvogskjermer') {
+        if (selectedCategories.laptoper && category === 'tvogskjermer') {
             return true;
         }
-        if (selectedCategories.laptoper && product.category === 'tilbehør') {
+        if (selectedCategories.laptoper && category === 'tilbehør') {
             return true;
         }
-        if (selectedCategories.laptoper && product.category === 'smartklokker') {
+        if (selectedCategories.laptoper && category === 'smartklokker') {
             return true;
         }
-        if (selectedCategories.laptoper && product.category === 'audio') {
+        if (selectedCategories.laptoper && category === 'audio') {
             return true;
         }
 
         return false;
     });
-
-    if (!products) {
-        return (
-            <div className="loading-products">
-                <img src={loadingGIF} alt="Lader GIF" />
-                <p>Lader produktene...</p>
-            </div>
-        );
-    }
 
     return (
         <div className="projects-view">
