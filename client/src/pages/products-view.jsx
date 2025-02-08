@@ -4,10 +4,12 @@ import ProductBlock from "../components/product-block.jsx";
 import { useEffect, useState, React } from "react";
 import loadingGIF from '../assets/utils/loading.gif';
 import Footer from '../components/footer.jsx';
+import { useLocation } from 'react-router-dom';
 import { strokeWidth } from '../service/config.js';
 
 export default function ProductsView() {
     const [products, setProducts] = useState([]);
+    const location = useLocation();
     const [selectedCategories, setSelectedCategories] = useState({
         mobiltelefoner: true,
         laptoper: true,
@@ -20,6 +22,16 @@ export default function ProductsView() {
     useEffect(() => {
         callProductsFetch();
     }, []);
+
+    // Filtrer produkter etter kategori
+  useEffect(() => {
+    const category = getCategoryFromUrl();
+    if (category) {
+      setProducts(products.filter((product) => product.productCategory.toLowerCase() === category.toLowerCase()));
+    } else {
+        setProducts(products); // Hvis ingen kategori er valgt, vis alle produkter
+    }
+  }, [location.search, products]);
 
     async function callProductsFetch() {
         try {
@@ -38,6 +50,11 @@ export default function ProductsView() {
             </div>
         );
     }
+
+    const getCategoryFromUrl = () => {
+        const params = new URLSearchParams(location.search);
+        return params.get('kategori'); // Får ut "mobiltelefoner" for eksempel
+    };
 
     const handleCategoryChange = (e) => {
         const { name, checked } = e.target;
