@@ -55,16 +55,16 @@ export default function ProductsView() {
         if (selectedCategories.laptoper && category === 'laptoper') {
             return true;
         }
-        if (selectedCategories.laptoper && category === 'tvogskjermer') {
+        if (selectedCategories.tvogskjermer && category === 'tvogskjermer') {
             return true;
         }
-        if (selectedCategories.laptoper && category === 'tilbehør') {
+        if (selectedCategories.tilbehør && category === 'tilbehør') {
             return true;
         }
-        if (selectedCategories.laptoper && category === 'smartklokker') {
+        if (selectedCategories.smartklokker && category === 'smartklokker') {
             return true;
         }
-        if (selectedCategories.laptoper && category === 'audio') {
+        if (selectedCategories.audio && category === 'audio') {
             return true;
         }
 
