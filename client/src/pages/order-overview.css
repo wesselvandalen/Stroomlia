@@ -56,24 +56,12 @@
 
 /* Section Styling */
 .section {
-    margin-bottom: 30px;
-}
-
-.section h2 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #333;
+    margin-bottom: 60px;
 }
 
 .product {
     display: flex;
     align-items: center;
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd; /* Subtle border for product items */
-    border-radius: 6px;
-    margin-bottom: 15px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .product img {
@@ -99,33 +87,14 @@
 }
 
 /* Form Section */
-.section .form-group {
-    margin-bottom: 20px;
+
+.overview-title {
+    font-size: 20px;
+    color: rbga(0, 0, 0, .7);
 }
 
-.section .form-group label {
-    font-size: 14px;
-    color: #333;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.section .form-group input,
-.section .form-group select {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #333;
-    background-color: white;
-}
-
-.section .form-group input:focus,
-.section .form-group select:focus {
-    border-color: #333;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+.info-group p {
+    margin: 3px 0;
 }
 
 /* Price and Order Summary */
@@ -133,7 +102,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: -20px;
 }
 
 .price-container p {
@@ -147,22 +116,23 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    margin: -40px 0 -20px 0;
 }
 
 .discount-title {
     font-size: 18px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .discount-input {
-    padding: 8px 12px;
+    padding: 10px 12px;
     font-size: 14px;
     border: 1px solid #ccc; /* Light gray border for input */
     border-radius: 4px;
     width: 200px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
 .apply-button {
@@ -173,7 +143,6 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 10px;
 }
 
 .apply-button:hover {
@@ -188,15 +157,25 @@
 
 /* Place Order Button */
 button.apply-button {
-    background-color: #333;
-    width: 100%;
-    padding: 15px;
+    background-color: #0A84FF;
+    border-radius: 24px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
     font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button.apply-button svg {
+    width: 18px;
+    height: 18px;
 }
 
 button.apply-button:hover {
-    background-color: #555;
+    background-color: #0272e2;
+    cursor: pointer;
 }

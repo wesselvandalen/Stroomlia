@@ -98,7 +98,7 @@
 
 .mv-perk h3 {
     margin: 5px 0 0 0;
-    color: #000;
+    color: rgba(0, 0, 0, .7);
     font-size: 18px;
     font-weight: 500;
 }

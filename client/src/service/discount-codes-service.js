@@ -1,3 +1,5 @@
+const discountCodes = ['NOR10'];
+
 export function discountCodeExists(code) {
-    return code === 'WESSEL20';
+    return discountCodes.includes(code);
 }

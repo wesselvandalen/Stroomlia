@@ -8,16 +8,18 @@ import { getShoppingCart } from '../service/shopping-cart-service.js';
 import { fetchProductById } from '../service/product-service.js';
 import React from 'react';
 import { strokeWidth } from '../service/config.js';
+import { useWindowSize } from 'react-use'
+import Confetti from 'react-confetti'
+import { makeNumbersReadable } from '../service/utils.js';
 
 export default function OrderSucces() {
     const { orderId } = useParams();
     const [order, setOrder] = useState();
-    const [isExploding, setIsExploding] = useState(false);
     const [products, setProducts] = useState(null);
+    const { width, height } = useWindowSize()
 
     useEffect(() => {
         fetchOrderById(orderId);
-        setIsExploding(true);
     }, []);
 
     function getProductIds(cart) {
@@ -67,27 +69,32 @@ export default function OrderSucces() {
 
                 <h3>Hei {order.orderPersonalia.firstName},</h3>
                 <p>You placed order #{order.id}. Here are your products:</p>
-                {isExploding && <ConfettiExplosion />}
+
+                <Confetti
+                    width={width-20}
+                    height={height-20}
+                />
+
                 <div className="minimal-order-details">
                     {products.map((product) => (
-                        <div className="order-product-item" key={product.id}>
-                            <div className="order-product-image">
-                                <img src={product.imagePath} alt={product.name} />
-                            </div>
-                            <div className="order-product-info">
-                                <h4>{product.name}</h4>
-                                <p className="product-description">{product.description}</p>
-                                <p className="product-rating">
-                                    {product.averageRating} / 5 ⭐ ({product.numberOfRatings} reviews)
-                                </p>
-                                <p className="product-price">Price: €{product.price.toFixed(2)}</p>
-                            </div>
+                        <div className="product" key={product.id}>
+                            {product && (
+                                <div className="shopping-cart-item-container">
+                                    <div className="shopping-cart-item-title-image-container">
+                                        <img src={product.imagePaths[0]} alt={product.name} />
+                                        <div className="shopping-cart-item-info">
+                                            <h3>{product.name}</h3>
+                                            <p>{makeNumbersReadable(Number(product.price))} kr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
 
                 <div className="minimal-order-total">
-                    <p>Total: €{order.totalPrice.toFixed(2)}</p>
+                    <p>Totalpris: {makeNumbersReadable(order.totalPrice)} kr</p>
                 </div>
             </div>
             <Footer />

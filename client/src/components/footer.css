@@ -7,15 +7,61 @@
     background-color: #fafafa;
     margin-top: 50px;
     height: 200px;
+    padding: 60px 0 40px 0;
 }
 
 .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1223px;
+}
+
+.footer-left {
+    justify-content: start;
+}
+
+.footer-a {
+    text-decoration: none;
+    color: #0A84FF;
+}
+
+.footer-a {
+    color: #0272e2;
+}
+
+.footer-top {
+    width: 100%;
+    max-width: 890px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.footer-top h3 {
+    color: #231f20;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.footer-top p {
+    color: #bababa;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: -15px;
+}
+
+.footer-bottom {
+    margin-bottom: 30px;
+}
+
+.footer-part {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    max-width: 1223px;
 }
 
 .footer-content img {

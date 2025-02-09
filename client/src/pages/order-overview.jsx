@@ -7,8 +7,9 @@ import { discountCodeExists } from '../service/discount-codes-service.js';
 import React from 'react';
 import Footer from '../components/footer.jsx';
 import { strokeWidth } from '../service/config.js';
+import { makeNumbersReadable } from '../service/utils.js';
 
-const OrderOverview = () => {
+export default function OrderOverview() {
     const [products, setProducts] = useState();
     const [order, setOrder] = useState();
     const [carrierList, setCarrierList] = useState();
@@ -50,13 +51,16 @@ const OrderOverview = () => {
 
     const handleApplyCode = () => {
         if (discountCodeExists(discountCode) && !discountUsed) {
-            setMessage(`Added 20% discount on top of your order!`);
+            setMessage(`Lagt til 10% rabatt på bestillingen din!`);
             const newPrice = addDiscountToTotalPrice(20);
             setTotalPrice(newPrice);
             setDiscoundUsed(true);
         } else {
-            setMessage(`Discount code ${discountCode} does not work..`);
+            setMessage(`Rabattkoden ${discountCode} virker ikke..`);
         }
+        setTimeout(() => {
+            setMessage('');
+        }, 3000);
     };
 
     if (!order) {
@@ -82,63 +86,38 @@ const OrderOverview = () => {
                 </div>
 
                 <div className="section">
-                    <h2>Customer Information</h2>
+                    <h2 className='overview-title'>Kundeinformasjon</h2>
 
-                    <div className="form-group">
-                        <label htmlFor="firstName"><strong>First Name:</strong></label>
-                        <input type="text" id="firstName" value={order.firstName} readOnly />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="lastName"><strong>Last Name:</strong></label>
-                        <input type="text" id="lastName" value={order.lastName} readOnly />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="email"><strong>Email:</strong></label>
-                        <input type="email" id="email" value={order.email} readOnly />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="phoneNumber"><strong>Phone Number:</strong></label>
-                        <input type="tel" id="phoneNumber" value={order.phonenumber} readOnly />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="address"><strong>Address:</strong></label>
-                        <input type="text" id="address" value={order.adres} readOnly />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="country"><strong>Country:</strong></label>
-                        <input type="text" id="country" value={order.country} readOnly />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="zipcode"><strong>Zip Code:</strong></label>
-                        <input type="text" id="zipcode" value={order.zipcode} readOnly />
+                    <div className="info-group">
+                        <p><strong>Fornavn:</strong> {order.firstName}</p>
+                        <p><strong>Etternavn:</strong> {order.lastName}</p>
+                        <p><strong>E-post:</strong> {order.email}</p>
+                        <p><strong>Telefonnummer:</strong> {order.phonenumber}</p>
+                        <p><strong>Adresse:</strong> {order.adres}</p>
+                        <p><strong>Land:</strong> {order.country}</p>
+                        <p><strong>Postalnummer:</strong> {order.zipcode}</p>
                     </div>
                 </div>
 
                 <div className="section">
-                    <h2>Product Information</h2>
-                    {products.map((product, index) => {
+                    <h2 className='overview-title'>Handlekurven din</h2>
+
+                    {products.map((product) => {
                         const matchingEntry = carrierList.find((carrierProduct) => carrierProduct.productId === product.id);
                         const amount = matchingEntry.amount;
 
                         return (
                             <div className="product" key={product.id}>
                                 {product && (
-                                    <>
-                                        <img src={product.imagePath} alt={product.name} />
-                                        <div className="product-info">
-                                            <p><strong>Product Name:</strong> {product.name}</p>
-                                            <p><strong>Description:</strong> {product.description}</p>
-                                            <p><strong>Price:</strong> €{product.price.toFixed(2)}</p>
-                                            <p><strong>Amount:</strong> {amount}</p>
-                                            <p><strong>Average Rating:</strong> {product.averageRating} stars</p>
+                                    <div className="shopping-cart-item-container">
+                                        <div className="shopping-cart-item-title-image-container">
+                                            <img src={product.imagePaths[0]} alt={product.name} />
+                                            <div className="shopping-cart-item-info">
+                                                <h3>{product.name} (x{amount})</h3>
+                                                <p>{makeNumbersReadable(Number(product.price))} kr</p>
+                                            </div>
                                         </div>
-                                    </>
+                                    </div>
                                 )}
                             </div>
                         );
@@ -146,36 +125,42 @@ const OrderOverview = () => {
                 </div>
 
                 <div className="section">
-                    <h2>Order Summary</h2>
+                    <h2 className='overview-title'>Oversikt</h2>
+
                     <div className="discount-price-container">
+
                         <div className='price-container'>
-                            <p><strong>Total Amount:</strong> {carrierList.reduce((total, line) => total + line.amount, 0)} item{(products.length > 1) ? 's' : ''}</p>
-                            <p><strong>Total Price:</strong> €{totalPrice}</p>
+                            <p><strong>Antall produkt:</strong> {carrierList.reduce((total, line) => total + line.amount, 0)}</p>
+                            <p><strong>Totalpris:</strong> {makeNumbersReadable(totalPrice)} kr</p>
                         </div>
+
                         <div className="discount-container">
-                            <h2 className='discount-title'>Got a discount code?</h2>
+                            <h2 className='discount-title'>Har du en rabattkode?</h2>
                             <div className="discount-price-container">
                                 <input
                                     type="text"
-                                    placeholder="Discount code"
+                                    placeholder="Rabattkode"
                                     value={discountCode}
                                     onChange={(e) => setDiscountCode(e.target.value)}
                                     className="discount-input"
                                 />
-                                <button onClick={handleApplyCode} className="apply-button">
-                                    Apply
-                                </button>
+                                <button onClick={handleApplyCode} className="apply-button">Bruk</button>
                             </div>
                             {message && <p className="message">{message}</p>}
                         </div>
+
                     </div>
                 </div>
-                <button onClick={placeOrder} className='apply-button'>Place order</button>
+
+                <button onClick={placeOrder} className='apply-button'>
+                    Legg inn bestilling
+                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </button>
 
             </div>
             <Footer />
         </div>
     );
 };
-
-export default OrderOverview;
