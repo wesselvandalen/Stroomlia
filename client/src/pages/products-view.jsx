@@ -2,10 +2,10 @@ import './products-view.css';
 import { fetchProducts, sortByProductCategory } from "../service/product-service.js";
 import ProductBlock from "../components/product-block.jsx";
 import { useEffect, useState, React } from "react";
-import loadingGIF from '../assets/utils/loading.gif';
 import Footer from '../components/footer.jsx';
 import { useLocation } from 'react-router-dom';
 import { strokeWidth } from '../service/config.js';
+import LoadingScreen from '../components/loading-screen.jsx';
 
 export default function ProductsView() {
     const [products, setProducts] = useState([]);
@@ -33,6 +33,14 @@ export default function ProductsView() {
     }
   }, [location.search, products]);
 
+    if (!products) {
+        return (
+            <LoadingScreen
+                message="Vi lader produktene..."
+            />
+        );
+    }
+
     async function callProductsFetch() {
         try {
             const data = await fetchProducts();
@@ -40,15 +48,6 @@ export default function ProductsView() {
         } catch (error) {
             console.error("Error fetching scents:", error);
         }
-    }
-
-    if (!products) {
-        return (
-            <div className="loading-products">
-                <img src={loadingGIF} alt="Lader GIF" />
-                <p>Lader produktene...</p>
-            </div>
-        );
     }
 
     const getCategoryFromUrl = () => {

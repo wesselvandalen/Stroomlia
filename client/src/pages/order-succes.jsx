@@ -3,7 +3,7 @@ import Footer from '../components/footer.jsx';
 import './order-succes.css';
 import { useEffect, useState } from 'react';
 import { getOrderById } from '../service/order-service.js';
-import ConfettiExplosion from 'react-confetti-explosion';
+import LoadingScreen from '../components/loading-screen.jsx';
 import { getShoppingCart } from '../service/shopping-cart-service.js';
 import { fetchProductById } from '../service/product-service.js';
 import React from 'react';
@@ -46,11 +46,15 @@ export default function OrderSucces() {
     }
 
     if (!order) {
-        return <div>loading order...</div>
+        return  <LoadingScreen
+            message="Vi henter bestillingen din..."
+        />;
     };
 
     if (!products) {
-        return <div>Loading products...</div>
+        return <LoadingScreen
+            message="Vi henter produktene for deg..."
+        />;
     }
 
     return (

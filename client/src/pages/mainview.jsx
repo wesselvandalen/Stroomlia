@@ -5,6 +5,7 @@ import { strokeWidth } from '../service/config.js';
 import { useEffect, useState } from 'react';
 import { fetchProducts, getRandomItems } from '../service/product-service.js';
 import ProductBlock from '../components/product-block.jsx';
+import LoadingScreen from '../components/loading-screen.jsx';
 
 export default function Mainview() {
     const [products, setProducts] = useState(null);
@@ -35,7 +36,9 @@ export default function Mainview() {
     ];
 
     if (!products) {
-        return (<div>Lader produktene...</div>);
+        return  <LoadingScreen
+            message="Vi lader produktene..."
+        />;
     }
 
     return (

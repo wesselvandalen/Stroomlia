@@ -8,6 +8,7 @@ import React from 'react';
 import Footer from '../components/footer.jsx';
 import { strokeWidth } from '../service/config.js';
 import { makeNumbersReadable } from '../service/utils.js';
+import LoadingScreen from '../components/loading-screen.jsx';
 
 export default function OrderOverview() {
     const [products, setProducts] = useState();
@@ -64,11 +65,15 @@ export default function OrderOverview() {
     };
 
     if (!order) {
-        return <div>Lader bestillingen din...</div>;
+        return  <LoadingScreen
+            message="Vi lader bestillingen din..."
+        />;
     }
 
     if (!products) {
-        return <div>Lader produktene...</div>;
+        return  <LoadingScreen
+            message="Vi lader produktene..."
+        />;
     }
 
     return (

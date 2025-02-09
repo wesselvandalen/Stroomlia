@@ -4,6 +4,7 @@ import './ordering-view.css';
 import {getShoppingCart} from "../service/shopping-cart-service.js";
 import OrderForm from "../components/order-form.jsx";
 import Footer from "../components/footer.jsx";
+import LoadingScreen from '../components/loading-screen.jsx';
 
 export default function OrderingView() {
     const [shoppingCart, setShoppingCart] = useState();
@@ -17,7 +18,9 @@ export default function OrderingView() {
     };
 
     if (!shoppingCart) {
-        return <div>Loading shoppingcart...</div>;
+        return  <LoadingScreen
+            message="Vi henter handlekurven for deg..."
+        />;
     }
 
     return (

@@ -10,6 +10,7 @@ import { makeNumbersReadable } from '../service/utils.js';
 import Notification from '../components/notification.jsx';
 import ImageCarousel from '../components/image-carousel.jsx';
 import { strokeWidth } from '../service/config.js';
+import LoadingScreen from '../components/loading-screen.jsx';
 
 export default function ProductDetailView() {
     const { productId } = useParams();
@@ -50,7 +51,9 @@ export default function ProductDetailView() {
     };
 
     if (!product || !randomProducts) {
-        return <div>Loading your product...</div>;
+        return  <LoadingScreen
+            message="Vi henter produktene..."
+        />;
     }
 
     async function getProductsByCategory() {

@@ -3,9 +3,9 @@ import ShoppingCartItem from "../components/shopping-cart-item.jsx";
 import { useEffect, useState, React } from "react";
 import { getShoppingCart, getTotalPrice } from "../service/shopping-cart-service.js";
 import { makeNumbersReadable } from '../service/utils.js';
-import loadingGIF from '../assets/utils/loading.gif';
 import Footer from '../components/footer.jsx';
 import { strokeWidth } from '../service/config.js';
+import LoadingScreen from '../components/loading-screen.jsx';
 
 export default function ShoppingCartView() {
     const [cartItems, setCartItems] = useState([]);
@@ -25,10 +25,9 @@ export default function ShoppingCartView() {
 
     if (!cartItems) {
         return (
-            <div className="loading-products">
-                <img src={loadingGIF} alt="Lader GIF" />
-                <p>Vi lader handlekurven for deg...</p>
-            </div>
+            <LoadingScreen
+                message="Vi henter handlekurven for deg..."
+            />
         );
     }
 
