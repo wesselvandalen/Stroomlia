@@ -1,0 +1,202 @@
+.order-overview-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Order Overview */
+.order-overview {
+    max-width: 1123px;
+    width: 100%
+}
+
+.order-overview h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Order top information */
+
+.overview-info-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 30px 0;
+}
+
+.overview-info-container div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.overview-info-container svg {
+    width: 20px;
+    height: 20px;
+    margin: -1px 0 0 0;
+}
+
+.overview-info-container h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.overview-info-container p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+/* Section Styling */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd; /* Subtle border for product items */
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.product img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 6px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info p {
+    margin: 5px 0;
+    color: #666; /* Lighter gray for product info text */
+}
+
+.product-info p strong {
+    color: #333; /* Stronger color for labels */
+}
+
+/* Form Section */
+.section .form-group {
+    margin-bottom: 20px;
+}
+
+.section .form-group label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section .form-group input,
+.section .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    background-color: white;
+}
+
+.section .form-group input:focus,
+.section .form-group select:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Price and Order Summary */
+.discount-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price-container p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.discount-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.discount-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.discount-input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc; /* Light gray border for input */
+    border-radius: 4px;
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.apply-button {
+    padding: 10px 20px;
+    background-color: #333; /* Dark button for a clean, bold look */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.apply-button:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+.message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Place Order Button */
+button.apply-button {
+    background-color: #333;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.apply-button:hover {
+    background-color: #555;
+}

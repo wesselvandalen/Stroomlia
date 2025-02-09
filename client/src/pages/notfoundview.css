@@ -1,0 +1,23 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.error-container img {
+    width: 300px;
+}
+
+.error-container h3 {
+    color: rgba(0, 0, 0, .7);
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.error-container p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}

@@ -50,7 +50,8 @@ export default function ProductBlock(product) {
                     <div className="title-review-container">
                         <h2 className='product-title' onClick={handleClick}>{product.title}</h2>
                         <div className="rating-container" style={style}>
-                            {stars} {rating}
+                            {stars} 
+                            <span style={{ color: '#888' }}>({rating})</span>
                         </div>
                         <p className='product-description'>{truncateText(product.description, 150)}</p>
                     </div>

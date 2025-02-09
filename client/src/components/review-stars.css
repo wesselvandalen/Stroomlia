@@ -2,8 +2,7 @@
     display: flex;
 }
 
-.review-stars-content svg {
+.star-icon {
     width: 15px;
     height: 15px;
-    color: #ffb400; /* Gold color for stars */
 }

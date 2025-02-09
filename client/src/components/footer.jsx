@@ -18,14 +18,14 @@ export default function Footer() {
                         <h3>Kategorier</h3>
                         <div className="footer-column">
                             <div className="footer-row">
-                                <a href="">Mobilertelefoner</a>
-                                <a href="">Laptoper</a>
-                                <a href="">TV og skjermer</a>
+                                <a href={`/produkter?kategori=mobiltelefoner`}>Mobilertelefoner</a>
+                                <a href={`/produkter?kategori=laptoper`}>Laptoper</a>
+                                <a href={`/produkter?kategori=tvogskjermer`}>TV og skjermer</a>
                             </div>
                             <div className="footer-row">
-                                <a href="">Tilbehør</a>
-                                <a href="">Smartklokker</a>
-                                <a href="">Audio</a>
+                                <a href={`/produkter?kategori=tilbehør`}>Tilbehør</a>
+                                <a href={`/produkter?kategori=smartklokker`}>Smartklokker</a>
+                                <a href={`/produkter?kategori=audio`}>Audio</a>
                             </div>
                         </div>
                     </div>
@@ -42,6 +42,7 @@ export default function Footer() {
                                 <a href="/sos">Spørsmål og svar</a>
                                 <a href="/handlekurv">Handlekurv</a>
                                 <a href="/konto">Konto</a>
+                                <a href="/vilkår">Vilkår</a>
                             </div>
                         </div>
                     </div>

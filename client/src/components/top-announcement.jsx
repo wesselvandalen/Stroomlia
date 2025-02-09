@@ -17,6 +17,7 @@ export default function TopAnnouncement() {
                     <a href="/omoss">Om oss</a>
                     <a href="/kontakt">Kontakt</a>
                     <a href="/sos">Spørsmål og svar</a>
+                    <a href="/vilkår">Vilkår</a>
                 </div>
                 <div className="top-section">
                     <p className='top-copyright'>

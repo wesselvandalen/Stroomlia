@@ -1,16 +1,3 @@
-/* Form Container */
-.form-container {
-    width: 100%;
-    background-color: #fff;
-    max-width: 1223px;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
 /* Form Groups */
 .form-group {
@@ -22,47 +9,70 @@
 /* Terms Section */
 .terms-container {
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 13px;
-    color: #777;
-    line-height: 1.5;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#terms-and-conditions {
+    width: 15px;
+    height: 15px;
 }
 
 .terms-text a {
-    color: #555;
-    text-decoration: underline;
-    font-weight: bold;
+    color: #0A84FF;
+    text-decoration: none;
 }
 
 .terms-text a:hover {
-    text-decoration: none;
+    color: #0272e2;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .9);
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.form-input {
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    margin-bottom: 10px;
 }
 
 /* Submit Button */
 button[type="submit"] {
-    width: 100%;
-    padding: 14px;
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+    background-color: #0A84FF;
+    border-radius: 24px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button[type="submit"] svg {
+    width: 18px;
+    height: 18px;
 }
 
 button[type="submit"]:hover {
-    background-color: #eaeaea;
-    border-color: #d0d0d0;
-}
-
-/* Additional Spacing for Readability */
-.form-container > * {
-    margin-bottom: 20px;
-}
-
-.form-container > *:last-child {
-    margin-bottom: 0;
+    background-color: #0272e2;
+    cursor: pointer;
 }

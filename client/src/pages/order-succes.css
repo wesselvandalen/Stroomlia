@@ -1,0 +1,82 @@
+.minimal-order-container {
+    margin: -20px auto 0 auto;
+    color: #333;
+}
+
+.final-order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.minimal-order-container h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.minimal-order-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.minimal-order-details {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.order-product-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-product-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 6px;
+    margin-right: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-product-info {
+    margin-top: -20px;
+}
+
+.order-product-info h4 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.product-rating {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.minimal-order-total p {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 20px;
+}

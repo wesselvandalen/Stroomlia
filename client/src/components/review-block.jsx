@@ -32,7 +32,6 @@ export default function ReviewBlock(rating) {
         <div className="rating-block-container">
             <div className="rating-split">
                 <p>{user.name}, {rating.numberOfStars}/5</p>
-                
             </div>
             <div className="rating-block-content">
                 <p>{rating.comment}</p>
