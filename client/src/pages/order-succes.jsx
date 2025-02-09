@@ -67,8 +67,8 @@ export default function OrderSucces() {
                     <p>Takk for bestillingen! Din nye teknologi er snart på vei til deg.</p>
                 </div>
 
-                <h3>Hei {order.orderPersonalia.firstName},</h3>
-                <p>You placed order #{order.id}. Here are your products:</p>
+                <h3 className='overview-greeting'>Heia {order.orderPersonalia.firstName},</h3>
+                <p>Bestillingen din (#{order.id}) er bekreftet og vi har satt i gang prosessen. Våre lagermedarbeidere pakker varene dine med omhu, og de vil snart være på vei til deg. Her er en oversikt over hva du har bestilt:</p>
 
                 <Confetti
                     width={width-20}
@@ -95,6 +95,7 @@ export default function OrderSucces() {
 
                 <div className="minimal-order-total">
                     <p>Totalpris: {makeNumbersReadable(order.totalPrice)} kr</p>
+                    <p>Estimert leveringstid: 1–2 arbeidsdager</p>
                 </div>
             </div>
             <Footer />

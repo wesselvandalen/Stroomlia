@@ -8,7 +8,7 @@
 
 /* Order Overview */
 .order-overview {
-    max-width: 1123px;
+    max-width: 880px;
     width: 100%
 }
 
@@ -49,12 +49,13 @@
 }
 
 .overview-info-container p {
-    font-size: 14px;
+    font-size: 16px;
     margin: 5px 0;
 }
 
 
 /* Section Styling */
+
 .section {
     margin-bottom: 60px;
 }
@@ -102,7 +103,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -20px;
 }
 
 .price-container p {

@@ -1,6 +1,7 @@
 .minimal-order-container {
-    margin: -20px auto 0 auto;
     color: #333;
+    width: 100%;
+    max-width: 890px;
 }
 
 .final-order-container {
@@ -8,18 +9,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-}
-
-.minimal-order-container h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #444;
-}
-
-.minimal-order-container p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #555;
 }
 
 .minimal-order-details {
@@ -72,11 +61,14 @@
 }
 
 .minimal-order-total p {
-    text-align: right;
-    font-size: 18px;
-    font-weight: bold;
-    color: #222;
+    text-align: left;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .7);
     border-top: 1px solid #ddd;
     padding-top: 15px;
     margin-top: 20px;
+}
+
+.overview-greeting {
+    margin: 0 0 -5px 0;
 }
