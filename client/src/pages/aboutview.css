@@ -13,6 +13,7 @@
     width: 100%;
     margin-top: -50px;
     max-width: 1223px;
+    flex: 1; /* Tar opp all tilgjengelig plass */
 }
 
 .av-content h1 {
