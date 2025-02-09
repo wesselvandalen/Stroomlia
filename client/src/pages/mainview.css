@@ -66,6 +66,7 @@
 /* Mv perks */
 
 .mv-perks {
+    z-index: 3;
     margin-top: 0;
 }
 

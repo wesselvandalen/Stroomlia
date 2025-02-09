@@ -3,6 +3,7 @@ package main;
 import main.app.application.ProductService;
 import main.app.application.UserService;
 import main.app.domain.Product;
+import main.app.domain.ProductCategory;
 import main.app.domain.ProductManual;
 import main.app.domain.ProductStatus;
 import main.app.domain.User;
@@ -43,14 +44,13 @@ public class StartupRunner implements CommandLineRunner {
                                 "fjellgeit", "https://cdn-icons-png.flaticon.com/512/9187/9187604.png"));
 
                 // Produkt
-
-                // MOBILTELEFONER
                 Product appleIphone14Pro = productService.createProduct(new ProductRequestDTO(
                                 "Apple iPhone 14 Pro",
                                 "En kraftig smarttelefon med A15 Bionic-chip, ProMotion-skjerm og et avansert trippelkameraoppsett for fantastisk foto og video.",
                                 15990,
                                 MOBILTELEFONER,
-                                List.of("https://files.refurbed.com/ii/iphone-14-pro-1662623168.jpg", "https://www.handyrettung.at/wp-content/uploads/2023/03/ip.14.pro_.max_.alle_.png"),
+                                List.of("https://files.refurbed.com/ii/iphone-14-pro-1662623168.jpg",
+                                                "https://www.handyrettung.at/wp-content/uploads/2023/03/ip.14.pro_.max_.alle_.png"),
                                 new ProductManual(
                                                 "Slå på enheten ved å holde inne sideknappen. Konfigurer Face ID, Apple ID og tilpass innstillinger etter behov. Bruk sveipebevegelser for å navigere, og aktiver alltid-på-skjerm for rask tilgang til varsler. Kameraet har nattmodus og ProRAW-funksjon for profesjonell bildekvalitet.",
                                                 List.of(
@@ -84,7 +84,8 @@ public class StartupRunner implements CommandLineRunner {
                                 "Den ultimate MacBook for både profesjonelle og studenter, med M2-chip for eksepsjonell ytelse og batterilevetid.",
                                 16990,
                                 LAPTOPER,
-                                List.of("https://www.forza-refurbished.nl/media/catalog/product/cache/9ba303bd5937bdef953006c58868d903/m/a/macbook-pro-13-inch-m1-2020-zilver-voorkant.jpg", "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-mbp13touchbar-performance-silver-gallery-2020?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1591921673000"),
+                                List.of("https://www.forza-refurbished.nl/media/catalog/product/cache/9ba303bd5937bdef953006c58868d903/m/a/macbook-pro-13-inch-m1-2020-zilver-voorkant.jpg",
+                                                "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-mbp13touchbar-performance-silver-gallery-2020?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1591921673000"),
                                 new ProductManual(
                                                 "Trykk på strømknappen for å starte enheten. Logg inn med Apple ID og tilpass Touch Bar. Bruk macOS-verktøy for produktivitet, og aktiver batterisparemodus for lengre batteritid.",
                                                 List.of(
@@ -121,7 +122,7 @@ public class StartupRunner implements CommandLineRunner {
                                 49990,
                                 TVOGSKJERMER,
                                 List.of("https://gfx3.senetic.com/akeneo-catalog/e/4/e/5/e4e5a5db2c3ade82cbcd6f44849a26c7fee1caa8_1690708_MWPE2MP_A_image3.jpg",
-                                "https://upgreatest.nl/images/products/pro-display-4.jpg"),
+                                                "https://upgreatest.nl/images/products/pro-display-4.jpg"),
                                 new ProductManual(
                                                 "Koble skjermen til en kompatibel Mac via Thunderbolt 3. Juster fargetemperatur og lysstyrke i macOS for optimal bildekvalitet. Bruk Pro Stand eller VESA-feste for fleksibel montering.",
                                                 List.of(
@@ -139,7 +140,7 @@ public class StartupRunner implements CommandLineRunner {
                                 2190,
                                 TVOGSKJERMER,
                                 List.of("https://m.media-amazon.com/images/I/51Y-Dulc3bL._AC_SL1024_.jpg",
-                                "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111929_appletv4k.png"),
+                                                "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111929_appletv4k.png"),
                                 new ProductManual(
                                                 "Koble Apple TV til en HDMI-kompatibel TV. Konfigurer med Apple ID og last ned apper fra App Store. Bruk Siri Remote for stemmestyring og navigering.",
                                                 List.of(
@@ -157,7 +158,7 @@ public class StartupRunner implements CommandLineRunner {
                                 3290,
                                 AUDIO,
                                 List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-gen2",
-                                "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MUYG3_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1701189162296"),
+                                                "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MUYG3_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1701189162296"),
                                 new ProductManual(
                                                 "Åpne ladeetuiet nær en iPhone eller iPad for å pare. Trykk og hold stilken for å veksle mellom støydemping og transparensmodus. Bruk Adaptive EQ for personlig lydopplevelse.",
                                                 List.of(
@@ -175,7 +176,7 @@ public class StartupRunner implements CommandLineRunner {
                                 1090,
                                 TILBEHØR,
                                 List.of("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MXK53_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1730508287095",
-                                "https://www.partly.nl/wp-content/uploads/2023/02/Apple-Magic-Mouse-3-600x600-1.png.webp"),
+                                                "https://www.partly.nl/wp-content/uploads/2023/02/Apple-Magic-Mouse-3-600x600-1.png.webp"),
                                 new ProductManual(
                                                 "Slå på musen og koble til via Bluetooth. Bruk Multi-Touch-overflaten for å scrolle, sveipe og zoome i macOS.",
                                                 List.of(
@@ -219,15 +220,15 @@ public class StartupRunner implements CommandLineRunner {
                                                                 "Støtte for Apple Pay",
                                                                 "Opptil 18 timers batteritid"),
                                                 "Krever iPhone 8 eller nyere med iOS 16 eller nyere."),
-                                ProductStatus.AVAILABLE));
+                                ProductStatus.LIMITED));
 
                 Product appleAirPodsMax = productService.createProduct(new ProductRequestDTO(
                                 "Apple AirPods Max",
                                 "Premium trådløse hodetelefoner med Hi-Fi-lyd og aktiv støydemping.",
                                 6990,
                                 AUDIO,
-                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-hero", 
-                                "https://bsimg.nl/images/apple-airpods-max-zwart_1.png/5ZfPC-JZASXOYo1iWngZ7xR-Tak%3D/fit-in/365x365/filters%3Aformat%28png%29%3Aupscale%28%29"),
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-hero",
+                                                "https://bsimg.nl/images/apple-airpods-max-zwart_1.png/5ZfPC-JZASXOYo1iWngZ7xR-Tak%3D/fit-in/365x365/filters%3Aformat%28png%29%3Aupscale%28%29"),
                                 new ProductManual(
                                                 "Slå på ved å trykke på knappen på høyre øreklokke. Koble til via Bluetooth eller automatisk med Apple-enheter.",
                                                 List.of(
@@ -245,7 +246,7 @@ public class StartupRunner implements CommandLineRunner {
                                 2490,
                                 AUDIO,
                                 List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/beats-fit-pro",
-                                "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/beats-fit-pro/pdp/product-carousel/black/pc-fit-pro-black-case-open.jpg"),
+                                                "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/beats-fit-pro/pdp/product-carousel/black/pc-fit-pro-black-case-open.jpg"),
                                 new ProductManual(
                                                 "Åpne ladeetuiet og hold det nær en iPhone for rask tilkobling. Juster vinger for best passform, og veksle mellom støydemping og Transparensmodus ved å trykke på øreproppen.",
                                                 List.of(
@@ -255,6 +256,142 @@ public class StartupRunner implements CommandLineRunner {
                                                                 "Opptil 6 timer lyttetid (24 timer med etui)",
                                                                 "Kompatibel med iOS og Android"),
                                                 "Kompatibel med iOS, macOS, Android og Windows via Bluetooth."),
+                                ProductStatus.AVAILABLE));
+
+                Product ipadPro12 = productService.createProduct(new ProductRequestDTO(
+                                "iPad Pro 12,9-tommer (M2)",
+                                "Den kraftigste iPad-en noensinne med M2-chip, ProMotion-teknologi og Apple Pencil-støtte.",
+                                14990,
+                                ProductCategory.MOBILTELEFONER,
+                                List.of("https://www.apple.com/v/ipad-pro/images/overview/hero/hero_static__b53h30nr8vm6_large.jpg"),
+                                new ProductManual(
+                                                "Slå på ved å trykke på strømknappen. Sett opp Face ID og synkroniser med iCloud for enkel tilgang til filer og apper.",
+                                                List.of(
+                                                                "M2-chip for høy ytelse",
+                                                                "12,9-tommers Liquid Retina XDR-skjerm",
+                                                                "Støtte for Apple Pencil (2. gen)",
+                                                                "5G-støtte for rask tilkobling",
+                                                                "USB-C med Thunderbolt 4"),
+                                                "Kompatibel med iPadOS 16 og nyere. Støtter Magic Keyboard og Apple Pencil 2"),
+                                ProductStatus.UNAVAILABLE));
+
+                Product appleWatchUltra = productService.createProduct(new ProductRequestDTO(
+                                "Apple Watch Ultra",
+                                "Den ultimate smartklokken for eventyrere og idrettsutøvere med robust titan-design og avanserte helsesensorer.",
+                                9990,
+                                ProductCategory.SMARTKLOKKER,
+                                List.of("https://www.apple.com/v/apple-watch-ultra/images/overview/design/design_static__b53h30nr8vm6_large.jpg"),
+                                new ProductManual(
+                                                "Hold inne sideknappen for å slå på. Sett opp med iPhone via Apple Watch-appen. Tilpass urskiver og helsemålinger etter behov.",
+                                                List.of(
+                                                                "49 mm titan-konstruksjon",
+                                                                "Avansert GPS med nøyaktig posisjonering",
+                                                                "Opptil 36 timer batteritid",
+                                                                "EKG og oksygenmetningsmåling",
+                                                                "Vannbestandig ned til 100 meter"),
+                                                "Krever iPhone 8 eller nyere med iOS 16 eller nyere"),
+                                ProductStatus.AVAILABLE));
+
+                Product usbCCharger = productService.createProduct(new ProductRequestDTO(
+                                "Apple 20W USB-C Lader",
+                                "Rask og effektiv lader for iPhone, iPad og andre USB-C-enheter.",
+                                249,
+                                ProductCategory.TILBEHØR,
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHJA3?wid=2000&hei=2000&fmt=jpeg&qlt=80&.v=1602179063000"),
+                                new ProductManual(
+                                                "Koble laderen til en veggkontakt og bruk en kompatibel USB-C-kabel for å lade enheten.",
+                                                List.of(
+                                                                "20W hurtiglading",
+                                                                "USB-C-port",
+                                                                "Kompatibel med iPhone og iPad",
+                                                                "Kompakt design",
+                                                                "Støtter MagSafe-lading"),
+                                                "Fungerer med alle enheter som støtter USB-C-lading."),
+                                ProductStatus.LIMITED));
+
+                Product lightningCable = productService.createProduct(new ProductRequestDTO(
+                                "Apple USB-C til Lightning-kabel (1m)",
+                                "Kabel for lading og synkronisering av iPhone og iPad.",
+                                199,
+                                ProductCategory.TILBEHØR,
+                                List.of("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MLL82?wid=2000&hei=2000&fmt=jpeg&qlt=80&.v=1472772632000"),
+                                new ProductManual(
+                                                "Koble kabelen til en USB-C-lader eller datamaskin for lading og dataoverføring.",
+                                                List.of(
+                                                                "1 meter lengde",
+                                                                "USB-C til Lightning",
+                                                                "Kompatibel med iPhone og iPad",
+                                                                "MFI-sertifisert for sikker bruk",
+                                                                "Støtter hurtiglading"),
+                                                "Fungerer med alle enheter som har Lightning-port."),
+                                ProductStatus.LIMITED));
+
+                Product studioDisplay = productService.createProduct(new ProductRequestDTO(
+                                "Apple Studio Display",
+                                "27-tommers 5K Retina-skjerm med avansert bildekvalitet for profesjonelle.",
+                                17990,
+                                ProductCategory.TVOGSKJERMER,
+                                List.of("https://www.apple.com/newsroom/images/product/mac/standard/Apple_Studio-Display_5K-Retina_screen_03182022_inline.jpg"),
+                                new ProductManual(
+                                                "Koble til Mac eller PC med Thunderbolt 3 eller USB-C for høyoppløst visning.",
+                                                List.of(
+                                                                "27-tommers 5K Retina-skjerm",
+                                                                "P3 Wide Color og True Tone",
+                                                                "12 MP ultravidvinkelkamera med Center Stage",
+                                                                "6 høyttalere med romtilpasset lyd",
+                                                                "Tre USB-C-porter og en Thunderbolt 3-port"),
+                                                "Kompatibel med macOS Monterey og nyere."),
+                                ProductStatus.AVAILABLE));
+
+                Product macbookAir15 = productService.createProduct(new ProductRequestDTO(
+                                "MacBook Air 15 (M2)",
+                                "Ultratynn og lett bærbar med M2-chip og imponerende batteritid.",
+                                18990,
+                                ProductCategory.LAPTOPER,
+                                List.of("https://www.apple.com/v/macbook-air/images/overview/hero/hero_static__b53h30nr8vm6_large.jpg"),
+                                new ProductManual(
+                                                "Slå på enheten og sett opp Touch ID. Logg inn med Apple ID og synkroniser med iCloud.",
+                                                List.of(
+                                                                "Apple M2-chip for kraftig ytelse",
+                                                                "15-tommers Liquid Retina-skjerm",
+                                                                "Opptil 18 timer batteritid",
+                                                                "MagSafe-lading og to Thunderbolt-porter",
+                                                                "macOS Ventura for smidig arbeidsflyt"),
+                                                "Kompatibel med macOS Ventura og nyere. Støtter iCloud og Continuity-funksjoner"),
+                                ProductStatus.UNAVAILABLE));
+
+                Product iphone14 = productService.createProduct(new ProductRequestDTO(
+                                "iPhone 14",
+                                "En kraftig smarttelefon med A15 Bionic-chip og avansert dobbeltkamera.",
+                                12990,
+                                ProductCategory.MOBILTELEFONER,
+                                List.of("https://www.apple.com/v/iphone-14/images/overview/hero/hero_static__b53h30nr8vm6_large.jpg"),
+                                new ProductManual(
+                                                "Slå på enheten og sett opp Face ID. Overfør data fra gammel enhet med Quick Start.",
+                                                List.of(
+                                                                "A15 Bionic-chip for rask ytelse",
+                                                                "6,1-tommers Super Retina XDR-skjerm",
+                                                                "Dobbeltkamera med nattmodus",
+                                                                "5G-støtte for rask tilkobling",
+                                                                "iOS 16 med Live Activities"),
+                                                "Kompatibel med iOS 16 og nyere. Støtter MagSafe-tilbehør og AirPods"),
+                                ProductStatus.LIMITED));
+
+                Product magicKeyboard = productService.createProduct(new ProductRequestDTO(
+                                "Magic Keyboard med Touch ID",
+                                "Trådløst tastatur med Touch ID for sikker pålogging og rask navigasjon.",
+                                1790,
+                                ProductCategory.TILBEHØR,
+                                List.of("https://www.apple.com/v/magic-keyboard/images/overview/hero/hero_static__b53h30nr8vm6_large.jpg"),
+                                new ProductManual(
+                                                "Slå på tastaturet og koble til Mac via Bluetooth eller medfølgende USB-C-kabel.",
+                                                List.of(
+                                                                "Touch ID for sikker pålogging",
+                                                                "Lavprofil taster med stabil mekanisme",
+                                                                "USB-C til Lightning-lading",
+                                                                "Automatisk sammenkobling med Mac",
+                                                                "Støtter macOS for full kompatibilitet"),
+                                                "Kompatibel med macOS Monterey og nyere. Krever en Mac med Apple Silicon"),
                                 ProductStatus.AVAILABLE));
 
                 // Anmeldelser
@@ -330,6 +467,5 @@ public class StartupRunner implements CommandLineRunner {
                                 new RatingRequestDTO(4, "Litt tunge, men lyden er utrolig.", rudopudo.getId()));
                 this.productService.writeRating(appleAirPodsMax.getId(),
                                 new RatingRequestDTO(5, "Beste hodetelefonene jeg har eid!", fjellgeit.getId()));
-
         }
 }

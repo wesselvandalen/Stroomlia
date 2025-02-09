@@ -1,5 +1,5 @@
-const discountCodes = ['NOR10'];
+const discountCodes = ['VENN'];
 
 export function discountCodeExists(code) {
-    return discountCodes.includes(code);
+    return discountCodes.includes(code.toUpperCase());
 }

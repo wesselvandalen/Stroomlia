@@ -8,7 +8,7 @@ export default function SpecialMessage() {
             <div className="sm-content">
                 
                 <p>
-                    Livet er bedre når man deler med hverandre! Send en gave til en venn(inne)!
+                    Livet er bedre når man deler med hverandre! Bruk koden VENN for 5% rabatt!
                 </p>
                 <img src={emoji} alt="Hjerte emoji" />
 
