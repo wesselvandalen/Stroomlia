@@ -66,3 +66,64 @@
     height: 20px;
     color: white;
 }
+
+/* Hamburger menu */
+
+.ham-btn {
+    display: none;
+    font-size: 2rem;
+    width: 25px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ham-btn svg {
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .header-links {
+        display: none;
+        position: absolute;
+        top: 124px;
+        right: 0;
+        background-color: #231F20;
+        width: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 500;
+    }
+    
+    .header-content {
+        margin: 0 25px;
+    }
+
+    .header-links a {
+        padding: 20px 0;
+        gap: 10px;
+        margin: 0;
+        width: 90vw;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .header-links a svg {
+        margin: -1px 0 0 0;
+    }
+
+    .header-links.open {
+        display: flex;
+    }
+
+    .ham-btn {
+        display: block;
+    }
+}

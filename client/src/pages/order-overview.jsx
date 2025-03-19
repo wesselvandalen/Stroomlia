@@ -6,7 +6,7 @@ import { fetchProductById } from '../service/product-service.js';
 import { discountCodeExists } from '../service/discount-codes-service.js';
 import React from 'react';
 import Footer from '../components/footer.jsx';
-import { strokeWidth } from '../service/config.js';
+import { strokeWidth } from '../config/config.js';
 import { makeNumbersReadable } from '../service/utils.js';
 import LoadingScreen from '../components/loading-screen.jsx';
 

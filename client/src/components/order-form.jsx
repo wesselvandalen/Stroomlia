@@ -4,7 +4,7 @@ import React, { ChangeEvent, useState } from "react";
 import { createOrder } from '../service/order-service.js';
 import { getShoppingCart } from '../service/shopping-cart-service.js';
 import { ProductAmountCarrier } from '../model/ProductAmountCarrier.js';
-import { strokeWidth } from '../service/config.js';
+import { strokeWidth } from '../config/config.js';
 
 export default function OrderForm() {
     const [permission, setPermission] = useState(false);

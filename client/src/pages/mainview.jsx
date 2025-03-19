@@ -1,7 +1,7 @@
 import './mainview.css';
 import macbookAsset from '../assets/graphics/macbook.png';
 import Footer from '../components/footer';
-import { strokeWidth } from '../service/config.js';
+import { strokeWidth } from '../config/config.js';
 import { useEffect, useState } from 'react';
 import { fetchProducts, getRandomItems } from '../service/product-service.js';
 import ProductBlock from '../components/product-block.jsx';
@@ -85,11 +85,10 @@ export default function Mainview() {
                         />
                         })}
                     </div>
-
                 </div>
             </div>
 
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     );
 }

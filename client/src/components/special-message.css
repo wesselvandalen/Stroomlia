@@ -29,3 +29,13 @@
     color: rgb(0, 0, 0);
     margin-right: 5px;
 }
+
+@media screen and (max-width: 900px) {
+    .sm-content {
+        max-width: none;
+    }
+
+    .sm1 {
+        display: none;
+    }
+}

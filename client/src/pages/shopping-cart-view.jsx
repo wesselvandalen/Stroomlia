@@ -4,7 +4,7 @@ import { useEffect, useState, React } from "react";
 import { getShoppingCart, getTotalPrice } from "../service/shopping-cart-service.js";
 import { makeNumbersReadable } from '../service/utils.js';
 import Footer from '../components/footer.jsx';
-import { strokeWidth } from '../service/config.js';
+import { strokeWidth } from '../config/config.js';
 import LoadingScreen from '../components/loading-screen.jsx';
 import { fetchProducts } from '../service/product-service.js';
 import ProductBlock from '../components/product-block.jsx';

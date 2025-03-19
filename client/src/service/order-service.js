@@ -1,4 +1,4 @@
-import { baseUrl } from './config.js';
+import { baseUrl } from '../config/config.js';
 
 export async function createOrder(orderObject) {
     const url = `${baseUrl}/orders`; 

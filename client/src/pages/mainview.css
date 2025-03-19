@@ -84,7 +84,7 @@
     max-width: 1100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px   ;
+    gap: 20px;
 }
 
 .mv-perk {
@@ -148,8 +148,44 @@
 }
 
 .mv-bts-products-container {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     margin-top: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .mv-section {
+        max-width: none;
+    }
+
+    .mv-intro-tekst-container h3 {
+        font-size: 24px;
+    }
+
+    .intro-tekst-2 {
+        font-size: 16px;
+    }
+
+    .mv-perks-content {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+    }
+
+    .mv-bts-content {
+        max-width: none;
+    }
+
+    .bts-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bts-description {
+        width: 90%;
+    }
+
+    .mv-bts-products-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

@@ -15,6 +15,7 @@ import OrderOverview from './pages/order-overview';
 import OrderSucces from './pages/order-succes';
 import TermsView from './pages/termsview';
 import NotFoundView from './pages/notfoundview';
+import AccountView from './pages/accountview';
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
             <Route path={"/omoss"} element={<AboutView/>}/>
             <Route path={"/bestilling"} element={<OrderingView/>}/>            
             <Route path={"/oversikt"} element={<OrderOverview/>}/>            
+            <Route path={"/konto"} element={<AccountView/>}/>            
             <Route path={"/bestilling/:orderId"} element={<OrderSucces/>}/>            
             <Route path={"/vilkår"} element={<TermsView/>}/>            
             <Route path={"*"} element={<NotFoundView/>}/>            

@@ -4,7 +4,7 @@ import ProductBlock from "../components/product-block.jsx";
 import { useEffect, useState, React } from "react";
 import Footer from '../components/footer.jsx';
 import { useLocation } from 'react-router-dom';
-import { strokeWidth } from '../service/config.js';
+import { strokeWidth } from '../config/config.js';
 import LoadingScreen from '../components/loading-screen.jsx';
 
 export default function ProductsView() {
@@ -24,14 +24,14 @@ export default function ProductsView() {
     }, []);
 
     // Filtrer produkter etter kategori
-  useEffect(() => {
-    const category = getCategoryFromUrl();
-    if (category) {
-      setProducts(products.filter((product) => product.productCategory.toLowerCase() === category.toLowerCase()));
-    } else {
-        setProducts(products); // Hvis ingen kategori er valgt, vis alle produkter
-    }
-  }, [location.search, products]);
+    useEffect(() => {
+        const category = getCategoryFromUrl();
+        if (category) {
+            setProducts(products.filter((product) => product.productCategory.toLowerCase() === category.toLowerCase()));
+        } else {
+            setProducts([]); // Hvis ingen kategori er valgt, vis alle produkter
+        }
+    }, []);
 
     if (!products) {
         return (

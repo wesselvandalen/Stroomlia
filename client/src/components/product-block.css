@@ -112,10 +112,15 @@
 }
 
 /* Optional: Add media query for responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .product-card {
-        width: 100%;
-        max-width: 300px;
+        width: 90%;
         margin: 10px auto;
+        min-height: 200px;
+        max-height: none;
+    }
+
+    .product-image {
+        height: 200px;   
     }
 }

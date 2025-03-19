@@ -1,4 +1,4 @@
-import { baseUrl } from './config.js';
+import { baseUrl } from '../config/config.js';
 
 export async function fetchUserById(id) {
     const url = `${baseUrl}/users/${id}`;

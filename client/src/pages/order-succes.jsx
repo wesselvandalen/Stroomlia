@@ -7,7 +7,7 @@ import LoadingScreen from '../components/loading-screen.jsx';
 import { getShoppingCart } from '../service/shopping-cart-service.js';
 import { fetchProductById } from '../service/product-service.js';
 import React from 'react';
-import { strokeWidth } from '../service/config.js';
+import { strokeWidth } from '../config/config.js';
 import { useWindowSize } from 'react-use'
 import Confetti from 'react-confetti'
 import { makeNumbersReadable } from '../service/utils.js';

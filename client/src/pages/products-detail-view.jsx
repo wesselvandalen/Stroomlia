@@ -9,7 +9,7 @@ import ProductBlock from '../components/product-block.jsx';
 import { makeNumbersReadable } from '../service/utils.js';
 import Notification from '../components/notification.jsx';
 import ImageCarousel from '../components/image-carousel.jsx';
-import { strokeWidth } from '../service/config.js';
+import { strokeWidth } from '../config/config.js';
 import LoadingScreen from '../components/loading-screen.jsx';
 
 export default function ProductDetailView() {
@@ -58,7 +58,7 @@ export default function ProductDetailView() {
 
     async function getProductsByCategory() {
         const data = await fetchProducts();
-        setRandomProducts(getRandomItems(data, 4));
+        setRandomProducts(getRandomItems(data, 3));
     }
 
     let productRatings = product.ratings;
