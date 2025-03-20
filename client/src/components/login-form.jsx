@@ -1,21 +1,32 @@
 import { useState } from "react";
 import './login-form.css';
 import googleIcon from '../assets/icons/google.png';
+import { signInGoogle, signInEmailAndPassword } from "../service/auth-service";
 
 export default function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    function handleLoginEmail(e) {
+    async function handleLoginEmail(e) {
         e.preventDefault();
 
-       
+        try {
+            await signInEmailAndPassword(email, password);
+            window.location.assign("/");
+        }catch (error) {
+            console.warn(error);
+        }
     }
 
-    const handleLoginGoogle = async (e) => {
+    async function handleLoginGoogle(e) {
         e.preventDefault();
 
-      
+        try {
+            await signInGoogle();
+            window.location.asign('/');    
+        } catch (error) {
+            console.warn(error);
+        }
     };
 
     return (
@@ -47,9 +58,9 @@ export default function LoginForm() {
             <p className="or-line">ELLER</p>
 
             <div className="providers-container">
-                <button>
+                <button onClick={handleLoginGoogle}>
                     <img src={googleIcon} alt="Google ikon" />
-                    Registrer deg med Google
+                    Logg på med Google
                 </button>
             </div>
 

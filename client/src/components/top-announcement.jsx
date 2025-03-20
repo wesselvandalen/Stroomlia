@@ -6,19 +6,13 @@ export default function TopAnnouncement() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
-        function handleClickOutside(event) {
-            console.log('hallo?');
-        }
-
         function handleScroll() {
             setMenuOpen(false);
         }
 
-        document.addEventListener("click", handleClickOutside);
         window.addEventListener("scroll", handleScroll);
 
         return () => {
-            document.removeEventListener("click", handleClickOutside);
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);

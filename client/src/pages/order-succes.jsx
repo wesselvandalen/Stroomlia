@@ -39,7 +39,6 @@ export default function OrderSucces() {
         let fetchedProducts = [];
         for (let i = 0; i < ids.length; i++) {
             const fetchedProduct = await fetchProductById(ids[i]);
-            console.log(fetchedProduct);
             fetchedProducts.push(fetchedProduct);
         }
         setProducts(fetchedProducts);

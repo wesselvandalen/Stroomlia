@@ -13,6 +13,7 @@ public class OrderPersonalia {
     @Id
     @GeneratedValue
     private Long id;
+    private String uid;
     private String email;
     private String firstName;
     private String lastName;
@@ -20,12 +21,17 @@ public class OrderPersonalia {
     private Address address;
 
     protected OrderPersonalia() { }
-    public OrderPersonalia(String email, String firstName, String lastName, String phoneNumber, Address address) {
+    public OrderPersonalia(String uid, String email, String firstName, String lastName, String phoneNumber, Address address) {
+        this.uid = uid;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.address = address;
+    }
+
+    public String getUid() {
+        return uid;
     }
 
     public Long getId() {
@@ -50,10 +56,5 @@ public class OrderPersonalia {
 
     public Address getAddress() {
         return address;
-    }
-
-    @Override
-    public String toString() {
-        return firstName + " " + lastName + ", " + email + ", " + phoneNumber + ", " + address.toString();
     }
 }

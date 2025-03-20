@@ -28,12 +28,12 @@ export async function signInGoogle() {
     const userDoc = await getDoc(userDocRef);
 
     // Hvis brukeren ikke finnes
-    if (!userDoc.exists() || !userDoc.data().role) {
+    if (!userDoc.exists() || !userDoc.data()) {
         window.alert(`Brukeren finnes ikke`);
         return;
+    } else {
+        return user;
     }
-
-    return user;
 };
 
 export async function registerWithGoogle() {

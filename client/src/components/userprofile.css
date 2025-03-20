@@ -12,7 +12,7 @@
     justify-content: start;
     flex-direction: column;
     width: 100%;
-    max-width: 1250px;
+    max-width: 1163px;
     margin: 0;
 }
 
@@ -59,6 +59,7 @@
     width: 100%;
     justify-content: start;
     margin-bottom: 30px;
+    margin-top: -20px;
 }
 
 .log-out-btn {
@@ -77,4 +78,9 @@
 .log-out-btn:hover {
     cursor: pointer;
     background-color: #f8f8f8;
+}
+
+.log-out-btn svg {
+    width: 16px;
+    height: 16px;
 }
