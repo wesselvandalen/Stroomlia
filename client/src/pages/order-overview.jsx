@@ -141,7 +141,7 @@ export default function OrderOverview() {
 
                         <div className="discount-container">
                             <h2 className='discount-title'>Har du en rabattkode?</h2>
-                            <div className="discount-price-container">
+                            <div className="discount-price-container-2">
                                 <input
                                     type="text"
                                     placeholder="Rabattkode"

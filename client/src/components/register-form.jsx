@@ -35,8 +35,6 @@ export default function RegisterForm() {
 
         try {
             await registerWithGoogle();
-            // window.location.assign("/");
-
         } catch (error) {
             console.warn(error);
         }

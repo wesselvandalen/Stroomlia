@@ -10,6 +10,10 @@
     width: 100%;
 }
 
+.ordering-view-total-container {
+    margin-bottom: 50px;
+}
+
 .ordering-header-container > * {
     color: black;
 }
@@ -53,4 +57,11 @@
 .ov-user-block button:hover {
     cursor: pointer;
     background-color: #f8f8f8;
+}
+
+@media screen and (max-width: 900px) {
+    .ordering-view-total-container {
+        max-width: none;
+        width: 90%;
+    }
 }

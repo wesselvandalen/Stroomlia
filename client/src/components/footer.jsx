@@ -28,7 +28,7 @@ export default function Footer() {
                     <div className='footer-column'>
                         <div className="footer-row">
                             <h3>Kategorier</h3>
-                            <div className="footer-column">
+                            <div className="footer-column-2">
                                 <div className="footer-row">
                                     <a href={`/produkter?kategori=mobiltelefoner`}>Mobilertelefoner</a>
                                     <a href={`/produkter?kategori=laptoper`}>Laptoper</a>
@@ -43,7 +43,7 @@ export default function Footer() {
                         </div>
                         <div className="footer-row">
                             <h3>Sider</h3>
-                            <div className="footer-column">
+                            <div className="footer-column-2">
                                 <div className="footer-row">
                                     <a href="/">Hjem</a>
                                     <a href="/produkter">Produkter</a>

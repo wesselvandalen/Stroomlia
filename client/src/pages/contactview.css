@@ -41,3 +41,10 @@
     color: #666;
     margin: 3px 0; 
 }
+
+@media screen and (max-width: 900px) {
+    .cv-content {
+        max-width: none;
+        width: 90%;
+    }
+}

@@ -88,7 +88,7 @@ export default function Mainview() {
                 </div>
             </div>
 
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     );
 }

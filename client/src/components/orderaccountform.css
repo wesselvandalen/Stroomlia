@@ -32,3 +32,11 @@
     width: 16px;
     height: 16px;
 }
+
+@media screen and (max-width: 900px) {
+    .oaf-container {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+}

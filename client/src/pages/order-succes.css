@@ -2,6 +2,7 @@
     color: #333;
     width: 100%;
     max-width: 890px;
+    margin-bottom: 50px;
 }
 
 .final-order-container {
@@ -71,4 +72,15 @@
 
 .overview-greeting {
     margin: 0 0 -5px 0;
+}
+
+.overview-info-container {
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .minimal-order-container {
+        max-width: none;
+        width: 90%;
+    }
 }

@@ -31,3 +31,10 @@
     color: #666;
     margin: 10px 0 30px 0;
 }
+
+@media screen and (max-width: 900px) {
+    .sos-content {
+        max-width: none;
+        width: 90%;
+    }
+}

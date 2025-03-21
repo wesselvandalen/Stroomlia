@@ -90,7 +90,6 @@
 
 .cart-button {
     position: relative;
-
 }
 
 .cart-button .bag-tooltip {
@@ -134,20 +133,32 @@
     opacity: 0.7;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {    
     .shopping-cart-item-container {
-        flex-direction: column;
         align-items: flex-start;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .shopping-cart-item-title-image-container {
+        width: 100%;
+        justify-content: space-between;
     }
 
     .price-buttons-container {
-        width: 100%;
         justify-content: space-between;
-        margin-top: 10px;
     }
 
     .shopping-cart-item-price {
         margin-top: 10px;
+    }
+
+    .cart-button .bag-tooltip::after {
+        max-width: 100px;
+    }
+    
+    .cart-button .bag-tooltip {
+        max-width: 100px;
     }
 }
