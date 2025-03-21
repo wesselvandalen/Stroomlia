@@ -48,7 +48,7 @@ export default function AccountView() {
                 }
 
             </div>
-            <Footer />
+            {/* <Footer /> */}
 
         </div>
     );

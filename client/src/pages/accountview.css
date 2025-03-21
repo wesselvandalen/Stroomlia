@@ -13,3 +13,10 @@
     flex-direction: column;
     max-width: 1163px;
 }
+
+@media screen and (max-width: 900px) {
+    .ac-content {
+        max-width: none;
+        width: 90%;
+    }
+}

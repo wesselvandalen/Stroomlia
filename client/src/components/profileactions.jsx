@@ -3,6 +3,7 @@ import { strokeWidth } from "../config/config";
 import { AuthContext } from '../contexts/authcontext';
 import './profileactions.css';
 import OrderList from "./orderlist";
+import AccountInformation from "./accountinformation";
 
 export default function ProfileActions() {
     const [currentAction, setCurrentAction] = useState();
@@ -15,7 +16,7 @@ export default function ProfileActions() {
         },
         {
             name: 'Konto informasjon',
-            component: null
+            component: <AccountInformation props={user} />
         }
     ];
 

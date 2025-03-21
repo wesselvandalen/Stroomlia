@@ -14,18 +14,26 @@ export default function OrderList(props) {
 
     return (
         <>
-            {orders.map((order) => {
-                return <div className="order-wrapper" key={order.id}>
-                    <p className="top">Bestilling #{order.id}</p>
-                    <p>Totalpris: {makeNumbersReadable(order.totalPrice)} kr</p>
+            {orders.length > 0 ?
+                <>
+                    {orders.map((order) => {
+                        return <div className="order-wrapper" key={order.id}>
+                            <p className="top">Bestilling #{order.id}</p>
+                            <p>Totalpris: {makeNumbersReadable(order.totalPrice)} kr</p>
 
-                    {order.orderLines.map((orderLine, index) => {
-                        return <ul className="order-block" key={index}>
-                            <li>{orderLine.productName} - {orderLine.amount} x {makeNumbersReadable(orderLine.productPrice)} kr</li>
-                        </ul>
+                            {order.orderLines.map((orderLine, index) => {
+                                return <ul className="order-block" key={index}>
+                                    <li>{orderLine.productName} - {orderLine.amount} x {makeNumbersReadable(orderLine.productPrice)} kr</li>
+                                </ul>
+                            })}
+                        </div>
                     })}
-                </div>
-            })}
+                </>
+                :
+                <p style={{ padding: '0 20px' }}>
+                    Denne kontoen har ikke lagt inn noen bestillinger ennå...
+                </p>
+            }
         </>
     );
 }
