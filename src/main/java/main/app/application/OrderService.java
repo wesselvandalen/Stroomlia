@@ -45,6 +45,28 @@ public class OrderService {
         return order.get();
     }
 
+    public List<Order> getAllOrders() {
+        List<Order> orders = this.orderRepository.findAll();
+        if (orders.isEmpty()) {
+            throw new OrderNotFoundException("Det finnes ingen bestillinger.");
+        }
+        return orders;
+    }
+
+    public List<Order> getOrdersByUid(String uid) {
+        List<Order> orders = getAllOrders();
+        List<Order> ordersWithCorrectUid = new ArrayList<>();
+        
+        for (int i = 0; i < orders.size(); i++) {
+            Order currentOrder = orders.get(i);
+            if (currentOrder.getOrderPersonalia().getUid().equals(uid)) {
+                ordersWithCorrectUid.add(currentOrder);
+            }
+        }
+
+        return ordersWithCorrectUid;
+    }
+
     public void deleteOrderById(Long id) {
         this.orderRepository.deleteById(id);
     }

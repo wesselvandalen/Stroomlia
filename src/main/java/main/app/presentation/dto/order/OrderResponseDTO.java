@@ -35,4 +35,15 @@ public class OrderResponseDTO {
     public Long getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "OrderResponseDTO{" +
+                "id=" + id +
+                ", totalPrice=" + totalPrice +
+                ", orderLines=" + orderLines +
+                ", orderPersonalia=" + orderPersonalia +
+                '}';
+    }
+
 }

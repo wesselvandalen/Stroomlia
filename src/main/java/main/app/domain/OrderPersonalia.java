@@ -57,4 +57,10 @@ public class OrderPersonalia {
     public Address getAddress() {
         return address;
     }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return uid;
+    }
 }

@@ -1,0 +1,9 @@
+.order-wrapper {
+    border-top: solid 1px rgba(0, 0, 0, .1);
+    margin-top: 5px;
+    padding: 20px 0 10px 0;
+}
+
+.order-wrapper .top {
+    margin: 0 0 0 0;
+}

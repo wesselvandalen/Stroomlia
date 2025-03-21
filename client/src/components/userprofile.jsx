@@ -1,12 +1,11 @@
 import { strokeWidth } from '../config/config';
 import { signUserOut } from '../service/auth-service';
+import ProfileActions from './profileactions';
 import './userprofile.css';
 
 export default function UserProfile(props) {
 
-    function logOut() {
-        signUserOut();
-    }
+    const logOut = () => signUserOut();
 
     return (
         <div className="up-container">
@@ -29,11 +28,7 @@ export default function UserProfile(props) {
                     </div>
                 </div>
 
-                <div className="up-action-list">
-                    <a href="/konto/bestillinger">
-                        Bestillinger
-                    </a>
-                </div>
+                <ProfileActions/>
 
             </div>
         </div>

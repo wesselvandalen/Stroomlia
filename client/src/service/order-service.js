@@ -40,3 +40,18 @@ export async function getOrderById(orderId) {
         console.error(error);
     }
 }
+
+export async function getOrdersByUid(uid) {
+    const url = `${baseUrl}/orders/users/${uid}`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            console.error(`Response status: ${response.status}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+    }
+}

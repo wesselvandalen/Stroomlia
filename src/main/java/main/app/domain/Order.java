@@ -57,6 +57,7 @@ public class Order {
                 "id=" + id +
                 ", totalPrice=" + totalPrice +
                 ", orderLines=" + orderLines +
+                ", uid=" + orderPersonalia +
                 '}';
     }
 }
