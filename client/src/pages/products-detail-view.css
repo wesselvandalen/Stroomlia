@@ -88,6 +88,26 @@
     opacity: 1;
 }
 
+.favorite-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 4px;
+    border: solid 1px rgba(0, 0, 0, .1);
+    background-color: white;
+    padding: 8px 20px;
+}
+
+.favorite-btn:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.favorite-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
 /* Perks */
 
 .product-perks {

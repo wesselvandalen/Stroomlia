@@ -11,6 +11,7 @@ import Notification from '../components/notification.jsx';
 import ImageCarousel from '../components/image-carousel.jsx';
 import { strokeWidth } from '../config/config.js';
 import LoadingScreen from '../components/loading-screen.jsx';
+import { addToFavorites } from '../service/favorite-service.js';
 
 export default function ProductDetailView() {
     const { productId } = useParams();
@@ -51,7 +52,7 @@ export default function ProductDetailView() {
     };
 
     if (!product || !randomProducts) {
-        return  <LoadingScreen
+        return <LoadingScreen
             message="Vi henter produktene..."
         />;
     }
@@ -69,6 +70,8 @@ export default function ProductDetailView() {
     const ratings = product.numberOfRatings === 0 ? 'Ingen anmeldelser ennå' : product.numberOfRatings;
     const productAddedMessage = `Lagt til ${product.name} i handlekurven ${amount} gang${amount > 1 ? 'er' : ''}!`;
     const status = (product.productStatus).toLowerCase();
+
+    const addProductToFavorites = () => addToFavorites(product);
 
     function getAvailabilityColor() {
         switch (status) {
@@ -129,6 +132,12 @@ export default function ProductDetailView() {
                     <div className="product-detail-view-stars">
                         <p className='number-of-ratings'>{ratings} anmelderser med en gjennomsnitt på {product.averageRating} stjerner</p>
                     </div>
+                    <button onClick={addProductToFavorites} className='favorite-btn'>
+                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M11.9932 5.13581C9.9938 2.7984 6.65975 2.16964 4.15469 4.31001C1.64964 6.45038 1.29697 10.029 3.2642 12.5604C4.89982 14.6651 9.84977 19.1041 11.4721 20.5408C11.6536 20.7016 11.7444 20.7819 11.8502 20.8135C11.9426 20.8411 12.0437 20.8411 12.1361 20.8135C12.2419 20.7819 12.3327 20.7016 12.5142 20.5408C14.1365 19.1041 19.0865 14.6651 20.7221 12.5604C22.6893 10.029 22.3797 6.42787 19.8316 4.31001C17.2835 2.19216 13.9925 2.7984 11.9932 5.13581Z" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        Legg til i ønskelisten
+                    </button>
 
                     <div className="product-info-split">
                         <div className="product-detail-view-image-container">
