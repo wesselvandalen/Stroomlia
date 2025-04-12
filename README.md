@@ -5,7 +5,7 @@
 Strømlia™ er en norsk nettbutikk som spesialiserer seg på Apple-produkter og annet førsteklasses elektronisk utstyr. Bygget med fokus på ytelse, brukervennlighet og moderne teknologi, gir Strømlia en sømløs handleopplevelse for teknologientusiaster i Norge.
 
 ## Om prosjektet
-Strømlia er et personlig prosjekt utviklet av meg, <a href="https://wesselvandalen.github.io/">wesselvandalen</a>, for å demonstrere mine ferdigheter innen både frontend- og backend-utvikling. Målet med dette prosjektet er ikke bare å lage en funksjonell nettbutikk, men også å vise min kompetanse som full-stack utvikler. Dette er en del av min ambisjon om å flytte til Norge og arbeide som utvikler der.
+Strømlia er et personlig prosjekt utviklet av meg, <a href="https://wesseldalen.eu/">wesselvandalen</a>, for å demonstrere mine ferdigheter innen både frontend- og backend-utvikling. Målet med dette prosjektet er ikke bare å lage en funksjonell nettbutikk, men også å vise min kompetanse som full-stack utvikler. Dette er en del av min ambisjon om å flytte til Norge og arbeide som utvikler der.
 
 ## Teknologi
 Strømlia er utvikler med et moderne teknologistack, som jeg personlig liker, har veldig mye erfaring med, og som er svært etterspurt på markedet:
