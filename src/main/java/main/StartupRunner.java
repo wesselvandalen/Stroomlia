@@ -11,12 +11,14 @@ import main.app.presentation.dto.product.ProductRequestDTO;
 import main.app.presentation.dto.rating.RatingRequestDTO;
 import main.app.presentation.dto.user.UserRequestDTO;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
 import static main.app.domain.ProductCategory.*;
 import static main.app.domain.ProductStatus.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 @Component
@@ -49,8 +51,7 @@ public class StartupRunner implements CommandLineRunner {
                                 "En kraftig smarttelefon med A15 Bionic-chip, ProMotion-skjerm og et avansert trippelkameraoppsett for fantastisk foto og video.",
                                 15990,
                                 MOBILTELEFONER,
-                                List.of("https://files.refurbed.com/ii/iphone-14-pro-1662623168.jpg",
-                                                "https://www.handyrettung.at/wp-content/uploads/2023/03/ip.14.pro_.max_.alle_.png"),
+                                List.of("iphone-14.jpg"),
                                 new ProductManual(
                                                 "Slå på enheten ved å holde inne sideknappen. Konfigurer Face ID, Apple ID og tilpass innstillinger etter behov. Bruk sveipebevegelser for å navigere, og aktiver alltid-på-skjerm for rask tilgang til varsler. Kameraet har nattmodus og ProRAW-funksjon for profesjonell bildekvalitet.",
                                                 List.of(

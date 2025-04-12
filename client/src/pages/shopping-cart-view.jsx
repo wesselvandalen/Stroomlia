@@ -30,7 +30,7 @@ export default function ShoppingCartView() {
     };
 
     const handleOrderButton = () => {
-        window.location.replace(`/bestilling/`);
+        window.location.replace(`/bestilling`);
     };
 
     if (!cartItems || !randomProducts) {
