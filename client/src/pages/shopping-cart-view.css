@@ -10,7 +10,7 @@
 
 .shopping-cart-container {
     width: 84%;
-    max-width: 1223px;
+    max-width: 1263px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -24,7 +24,7 @@
     flex-direction: column;
     align-items: start;
     color: #000;
-    max-width: 1223px;
+    max-width: 1263px;
     margin-top: -40px;
     width: 100%;
 }
@@ -63,7 +63,7 @@
 }
 
 .shopping-cart-summary {
-    max-width: 1223px;
+    max-width: 1263px;
 }
 
 .shopping-cart-view {

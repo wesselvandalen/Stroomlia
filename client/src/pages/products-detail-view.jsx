@@ -19,6 +19,7 @@ export default function ProductDetailView() {
     const [amount, setAmount] = useState(1);
     const [randomProducts, setRandomProducts] = useState([]);
     const [showNotification, setShowNotification] = useState(false);
+    const [notificationMessage, setNotificationMessage] = useState("");
 
     useEffect(() => {
         fetchProduct(productId);
@@ -45,6 +46,7 @@ export default function ProductDetailView() {
     const handleShoppingButton = () => {
         addItemToShoppingCart(product.id, Number(getProductAmountInput()), product.price);
         setShowNotification(true);
+        setNotificationMessage(`Lagt til ${product.name} i handlekurven ${amount} gang${amount > 1 ? 'er' : ''}!`);
     };
 
     const preventTyping = (event) => {
@@ -68,10 +70,13 @@ export default function ProductDetailView() {
     }
 
     const ratings = product.numberOfRatings === 0 ? 'Ingen anmeldelser ennå' : product.numberOfRatings;
-    const productAddedMessage = `Lagt til ${product.name} i handlekurven ${amount} gang${amount > 1 ? 'er' : ''}!`;
     const status = (product.productStatus).toLowerCase();
 
-    const addProductToFavorites = () => addToFavorites(product);
+    const addProductToFavorites = () => {
+        addToFavorites(product);
+        setShowNotification(true);
+        setNotificationMessage(`Lagt til ${product.name} i ønskelisten`);
+    }
 
     function getAvailabilityColor() {
         switch (status) {
@@ -273,7 +278,7 @@ export default function ProductDetailView() {
 
             {showNotification && (
                 <Notification
-                    message={productAddedMessage}
+                    message={notificationMessage}
                     onClose={() => setShowNotification(false)}
                 />
             )}

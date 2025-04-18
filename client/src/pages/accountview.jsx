@@ -9,7 +9,7 @@ import UserProfile from '../components/userprofile';
 
 export default function AccountView() {
     const [registerView, setRegisterView] = useState(false);
-    const { user, loading } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const handleRegisterViewSwitch = () => setRegisterView(!registerView);
 
@@ -33,10 +33,7 @@ export default function AccountView() {
                 }
 
                 {user ?
-                    <UserProfile
-                        key={1}
-                        user={user}
-                    />
+                    <UserProfile key={1} user={user} />
                     :
                     <>
                         {registerView ?

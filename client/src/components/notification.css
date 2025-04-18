@@ -2,11 +2,11 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #e6ffe6;
-    color: #075a36;
+    background-color: #f1fff1ab;
+    color: #0e623e;
     padding: 8px 16px;
     border-radius: 5px;
-    border: #075a36 solid 1px;
+    border: #075a3622 solid 1px;
     z-index: 1000;
     font-size: 16px;
     font-weight: 400;
