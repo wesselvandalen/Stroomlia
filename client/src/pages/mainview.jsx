@@ -46,8 +46,8 @@ export default function Mainview() {
 
             <div className="mv-section">
                 <div className="mv-intro-tekst-container">
-                    <h3>MacBook Pro (16-inch, 2021)</h3>
-                    <p className='intro-tekst-2'>Opplev ytelse i toppklasse med Apples kraftigste bærbare datamaskin.</p>
+                    <h3>MacBook Air 13 inch</h3>
+                    <p className='intro-tekst-2'>Med 13-tommers MacBook Air med M4-brikke kan du jobbe, spille og mer på farten. Med en imponerende Liquid Retina-skjerm, opptil 18 timers batterilevetid og et bemerkelsesverdig tynt og lett design er MacBook Air bygget for å vare og takler hva som helst, hvor som helst.</p>
                     <p className='intro-tekst-disclaimer'>Produktinformasjon kan endres uten forvarsel, så vi anbefaler at du alltid dobbeltsjekker spesifikasjonene før kjøp.*</p>
                 </div>
                 <img src={macbookAsset} alt="MacBook Pro (16-inch, 2021) asset." className='mv-intro-graphic'/>

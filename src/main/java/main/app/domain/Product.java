@@ -16,7 +16,6 @@ public class Product {
     private String name;
     @Column(columnDefinition = "LONGTEXT")
     private String description;
-    @Column(columnDefinition = "LONGTEXT")
     // Prisen er i norske kroner
     private double price;
     @Enumerated

@@ -1,11 +1,8 @@
 package main.app.domain;
 
-import static jakarta.persistence.CascadeType.ALL;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 
 @Entity
 public class OrderPersonalia {

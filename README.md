@@ -25,7 +25,6 @@ Strømlia er mer enn bare en nettbutikk – her er noen av de viktigste funksjon
 ## Videre utvikling
 Strømlia er et aktivt prosjekt, og følgende funksjoner er under utvikling:
 - **Bedre frakt- og sporingsalternativer**
-- **Kontoer og informasjon**
 
 ## Kontakt
 Har du spørsmål, forslag eller vil du bare ha en pratt om prosjektet? Ta kontakt via:

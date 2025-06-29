@@ -23,23 +23,25 @@
 }
 
 .mv-intro-tekst-container h3 {
-    background: linear-gradient(0deg, #9a7bf7 15%, #b085f2 50%, #d39eff 75%, #b0a5ff 90%, #7fa3ff 110%);
+    background: linear-gradient(0deg, #7bc1f7 15%, #4da4e7 50%, #0da6ec 75%, #a5beff 90%, #103eb2 110%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     font-size: 48px;
+    font-weight: 450;
     margin: 0;
 }
 
 .intro-tekst-2 {
     color: black;
     font-size: 18px;
+    padding: 0 20px;
     margin: 10px 0;
 }
 
 .intro-tekst-disclaimer {
     color: black;
-    font-size: 10px;
+    font-size: 14px;
     margin: 0;
 }
 

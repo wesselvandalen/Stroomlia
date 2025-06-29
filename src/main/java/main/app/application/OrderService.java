@@ -48,7 +48,7 @@ public class OrderService {
     public List<Order> getAllOrders() {
         List<Order> orders = this.orderRepository.findAll();
         if (orders.isEmpty()) {
-            throw new OrderNotFoundException("Det finnes ingen bestillinger.");
+            System.out.println("Orderslist is empty.");
         }
         return orders;
     }
