@@ -3,7 +3,7 @@
 */
 
 // Standard lenken til alle fetches
-export const baseUrl = 'http://localhost:8080'; 
+export const baseUrl = 'https://stroomlia.onrender.com/'; 
 
 // Tykkhet på ikonene
 export const strokeWidth = 2; 
